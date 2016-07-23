@@ -33,7 +33,7 @@ angular
   	.state('dataView', {
   		url : '/data-view',
   		templateUrl: 'views/dataView.html',
-  		controller : 'dataViewCtrl as dataView'
+  		controller : 'DataViewCtrl as dataView'
   	});
 
 }]);
