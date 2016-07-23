@@ -15,19 +15,15 @@ angular
   	$urlRouterProvider.otherwise('/');
 
   	$stateProvider
-  	.state('home', {
-  		url : '/',
-  		templateUrl: 'views/main.html'
+
+  	.state('keyMetrics', {
+  		url : '/key-metrics',
+  		templateUrl: 'views/keyMetrics.html'
   	})
 
   	.state('geo', {
   		url : '/geo',
   		templateUrl: 'views/geo.html'
-  	})
-
-  	.state('keyMetrics', {
-  		url : '/key-metrics',
-  		templateUrl: 'views/keyMetrics.html'
   	})
 
   	.state('dataView', {
