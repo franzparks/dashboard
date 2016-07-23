@@ -9,4 +9,15 @@
  * Main module of the application.
  */
 angular
-  .module('corporateDashBoardApp', []);
+  .module('corporateDashBoardApp', ['ui.router'])
+
+  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+  	$urlRouterProvider.otherwise('/');
+
+  	$stateProvider
+  	.state('home', {
+  		url : '/',
+  		templateUrl: 'views/main.html'
+  	});
+
+}]);
