@@ -34,6 +34,7 @@
             </button>
 
             <a class="navbar-brand" href="#/">CorporateDashBoard</a>
+
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -49,7 +50,9 @@
     </div>
 
     <div class="container">
-    <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+    <div ng-include="'views/keyMetrics.html'" ng-controller="KeymetricsCtrl as keyMetrics"></div>
+    <div ng-include="'views/geo.html'" ng-controller="DataviewCtrl as dataView"></div>
+    <div ng-include="'views/dataView.html'" ng-controller="GeoCtrl geo"></div>
     </div>
 
     <div class="footer">
