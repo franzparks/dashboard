@@ -17,7 +17,7 @@ angular
   	$stateProvider
 
   	.state('keyMetrics', {
-  		url : '/key-metrics',
+  		url : '/',
   		templateUrl: 'views/keyMetrics.html'
   	})
 
