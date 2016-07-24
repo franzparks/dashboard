@@ -1,4 +1,4 @@
-# Corporate-dash-board
+# A Corporate Dashboard Application
 
 ## Required Software
 
