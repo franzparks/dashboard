@@ -9,17 +9,7 @@
  */
 angular.module('corporateDashBoardApp')
   .controller('GeoCtrl', function () {
-    //this.awesomeThings = [
-    //  'AngularJS'
-    //];
-
-    //this.map = FusionCharts.ready(function(){
-   //var salesByState = new FusionCharts({
-    //    "type": "maps/usa",
-    //    "renderAt": "chartContainer",
-    //    "width": "600",
-    //    "height": "400",
-    //    "dataFormat": "json",
+   
     this.dataSource =  {
             "chart": {
                 "caption": "Annual Sales by State",
@@ -256,9 +246,5 @@ angular.module('corporateDashBoardApp')
                 }
             ]
         };
-    //});
-    //salesByState.render();
-//});
-
-
+   
   });
