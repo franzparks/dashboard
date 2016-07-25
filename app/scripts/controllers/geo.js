@@ -9,18 +9,18 @@
  */
 angular.module('corporateDashBoardApp')
   .controller('GeoCtrl', function () {
-    this.awesomeThings = [
-      'AngularJS'
-    ];
+    //this.awesomeThings = [
+    //  'AngularJS'
+    //];
 
-    this.map = FusionCharts.ready(function(){
-   var salesByState = new FusionCharts({
-        "type": "maps/usa",
-        "renderAt": "chartContainer",
-        "width": "600",
-        "height": "400",
-        "dataFormat": "json",
-        "dataSource": {
+    //this.map = FusionCharts.ready(function(){
+   //var salesByState = new FusionCharts({
+    //    "type": "maps/usa",
+    //    "renderAt": "chartContainer",
+    //    "width": "600",
+    //    "height": "400",
+    //    "dataFormat": "json",
+    this.dataSource =  {
             "chart": {
                 "caption": "Annual Sales by State",
                 "subcaption": "Last year",
@@ -255,10 +255,10 @@ angular.module('corporateDashBoardApp')
                     "value": "88234"
                 }
             ]
-        }
-    });
-    salesByState.render();
-});
+        };
+    //});
+    //salesByState.render();
+//});
 
 
   });

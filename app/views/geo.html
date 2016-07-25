@@ -3,7 +3,14 @@
 	<h1> Geo Locations</h1>
 	{{geo.awesomeThings}}
 
-	<div id="chartContainer">A US map will load here!</div>
+	<!--<div id="chartContainer">A US map will load here!</div> -->
 
-	{{geo.map}}
+	<fusioncharts
+      width="600"
+      height="400"
+      type= "maps/usa",
+      dataFormat= "json",
+      dataSource="{{geo.dataSource}}" 
+      >
+ </fusioncharts>
 </div>
