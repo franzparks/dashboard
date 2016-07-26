@@ -144,4 +144,101 @@ angular.module('corporateDashBoardApp')
 
 	};
 
+	this.transChartData = {
+                "chart":{
+                    "caption":"Daily Transactions",
+                    "subcaption":"Last 3 weeks",
+                    "xaxisname":"Date",
+                    "yaxisname":"No. of Transactions",
+                    "showvalues":"0",
+                    "theme":"fint"
+                },		
+                "data":[
+                    {
+                        "label":"14 May",
+                        "value":"1464"
+                    },
+                        {
+                        "label":"15 May",
+                        "value":"1062"
+                    },
+                        {
+                        "label":"16 May",
+                        "value":"1014"
+                    },
+                        {
+                        "label":"17 May",
+                        "value":"1294"
+                    },
+                        {
+                        "label":"18 May",
+                        "value":"1382"
+                    },
+                        {
+                        "label":"19 May",
+                        "value":"1085"
+                    },
+                        {
+                        "label":"20 May",
+                        "value":"1150"
+                    },
+                        {
+                        "label":"21 May",
+                        "value":"1420"
+                    },
+                        {
+                        "label":"22 May",
+                        "value":"1228"
+                    },
+                        {
+                        "label":"23 May",
+                        "value":"1435"
+                    },
+                        {
+                        "label":"24 May",
+                        "value":"1051"
+                    },
+                        {
+                        "label":"25 May",
+                        "value":"1231"
+                    },
+                        {
+                        "label":"26 May",
+                        "value":"1509"
+                    },
+                        {
+                        "label":"27 May",
+                        "value":"1480"
+                    },
+                        {
+                        "label":"28 May",
+                        "value":"1461"
+                    },
+                        {
+                        "label":"29 May",
+                        "value":"1258"
+                    },
+                        {
+                        "label":"30 May",
+                        "value":"991"
+                    },
+                        {
+                        "label":"31 May",
+                        "value":"1275"
+                    },
+                        {
+                        "label":"1 Jun",
+                        "value":"1336"
+                    },
+                        {
+                        "label":"2 Jun",
+                        "value":"1097"
+                    },
+                    {
+                        "label":"Yesterday",
+                        "value":"1411"
+                    }
+                ]
+            };
+
   });
