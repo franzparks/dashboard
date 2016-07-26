@@ -8,7 +8,7 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('DataViewCtrl', function () {
+  .controller('DataViewCtrl', function ($filter, ngTableParams) {
     this.awesomeThings = [
       'HTML5 Boilerplate'
   
