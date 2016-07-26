@@ -9,28 +9,30 @@
  </fusioncharts>-->
 
     
-    <div class='content' id='content'>
-    
-        <div class='' id='sales-chart-container'>
-            <fusioncharts
-                type= "column2d"
-                width={{keyMetrics.chartWidth}}
-                height={{keyMetrics.chartHeight}} 
-                dataFormat = "{{keyMetrics.dataType}}"
-                dataSource="{{keyMetrics.salesData}}"
-            >
-            </fusioncharts>
-        </div>
+    <div class='border-bottom' id='content'>
+        <div class="border-bottom"> 
+            <div class='chartCont border-right' id='sales-chart-container'>
+                <fusioncharts
+                    type= "column2d"
+                    width={{keyMetrics.chartWidth}}
+                    height={{keyMetrics.chartHeight}} 
+                    dataFormat = "{{keyMetrics.dataType}}"
+                    dataSource="{{keyMetrics.salesData}}"
+                >
+                </fusioncharts>
+            </div>
 
-        <div class='' id='trans-chart-container'>
-            <fusioncharts
-                type= "area2d"
-                width={{keyMetrics.chartWidth}}
-                height={{keyMetrics.chartHeight}} 
-                dataFormat = "{{keyMetrics.dataType}}"
-                dataSource="{{keyMetrics.transChartData}}"    
-            >
-            </fusioncharts>
+            <div class='chartCont' id='trans-chart-container'>
+                <fusioncharts
+                    type= "area2d"
+                    width={{keyMetrics.chartWidth}}
+                    height={{keyMetrics.chartHeight}} 
+                    dataFormat = "{{keyMetrics.dataType}}"
+                    dataSource="{{keyMetrics.transChartData}}"    
+                >
+                </fusioncharts>
+            </div>
+
         </div>
 
         <div class='' id='daily-footfall-chart-container'>
