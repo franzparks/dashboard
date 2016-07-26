@@ -1,8 +1,8 @@
-body1 {
+body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #00406A;
+    background-color: #346180;
     font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
 
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5 {
 
 
 .chartCont {
-    padding: 0px 12px 12px;
+    margin: 0px 12px;
     flex-direction: row;
 }
 .chart-left {
