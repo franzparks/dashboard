@@ -9,9 +9,9 @@
  </fusioncharts>-->
 
     
-    <div class='border-bottom content' id='content'>
-        <div class='border-bottom'>
-            <div class='chartCont border-right' id='sales-chart-container'>
+    <div class='content' id='content'>
+    
+        <div class='' id='sales-chart-container'>
             <fusioncharts
                 type= "column2d"
                 width={{keyMetrics.chartWidth}}
@@ -20,10 +20,9 @@
                 dataSource="{{keyMetrics.salesData}}"
             >
             </fusioncharts>
-            </div>
+        </div>
 
-
-            <div class='chartCont' id='trans-chart-container'>
+        <div class='' id='trans-chart-container'>
             <fusioncharts
                 type= "area2d"
                 width={{keyMetrics.chartWidth}}
@@ -32,9 +31,9 @@
                 dataSource="{{keyMetrics.transChartData}}"    
             >
             </fusioncharts>
-            </div>
+        </div>
 
-            <div class='chartCont' id='daily-footfall-chart-container'>
+        <div class='' id='daily-footfall-chart-container'>
             <fusioncharts
                 type= "area2d"
                 width={{keyMetrics.chartWidth}}
@@ -43,9 +42,7 @@
                 dataSource="{{keyMetrics.dailyFootfallChart}}"    
             >
             </fusioncharts>
-            </div>
         </div>
     </div>        
-
    
 </div>
