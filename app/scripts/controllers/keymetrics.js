@@ -10,6 +10,11 @@
 angular.module('corporateDashBoardApp')
   .controller('KeyMetricsCtrl', function () {
 
+
+  	this.chartWidth = '550';
+    this.chartHeight = '300';
+    this.dataType = 'json';
+
     this.myDataSource = {
    chart: {
        caption: "Harry's SuperMart",
