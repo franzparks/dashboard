@@ -1,24 +1,35 @@
-body {
+body1 {
     margin: 0;
     padding: 0;
     width: 100%;
     background-color: #00406A;
     font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
+
 h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
     font-weight: bold;
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
 .chartCont {
-    padding: 0px 12px;
+    padding: 0px 12px 12px;
+    flex-direction: row;
 }
-.border-bottom {
-    border-bottom: 1px dashed rgba(0, 117, 194, 0.2);
+.chart-left {
+    align-self: flex-start;
 }
-.border-right {
-    border-right: 1px dashed rgba(0, 117, 194, 0.2);
+
+.chart-right {
+    align-self: flex-end;
 }
+
 #container {
     width: 1200px;
     margin: 0 auto;

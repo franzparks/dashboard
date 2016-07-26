@@ -9,11 +9,12 @@
  </fusioncharts>-->
 
     
-    <div class='border-bottom' id='content'>
-        <div class="border-bottom"> 
-            <div class='chartCont border-right' id='sales-chart-container'>
+    <div class="flex-container " id='content11'>
+        <div class="chartCont"> 
+            <div class='chart-left' id='sales-chart-container'>
                 <fusioncharts
                     type= "column2d"
+                    renderAt= "sales-chart-container"
                     width={{keyMetrics.chartWidth}}
                     height={{keyMetrics.chartHeight}} 
                     dataFormat = "{{keyMetrics.dataType}}"
@@ -22,9 +23,10 @@
                 </fusioncharts>
             </div>
 
-            <div class='chartCont' id='trans-chart-container'>
+            <div class="chart-right" id='trans-chart-container'>
                 <fusioncharts
                     type= "area2d"
+                    renderAt= "trans-chart-container"
                     width={{keyMetrics.chartWidth}}
                     height={{keyMetrics.chartHeight}} 
                     dataFormat = "{{keyMetrics.dataType}}"
@@ -35,11 +37,12 @@
 
         </div>
 
-        <div class="border-bottom">
+        <div class="chartCont">
 
-            <div class='chartCont border-right' id='daily-footfall-chart-container'>
+            <div class="chart-left" id='daily-footfall-chart-container'>
                 <fusioncharts
                     type= "area2d"
+                    renderAt= "daily-footfall-chart-container"
                     width={{keyMetrics.chartWidth}}
                     height={{keyMetrics.chartHeight}} 
                     dataFormat = "{{keyMetrics.dataType}}"
@@ -48,9 +51,10 @@
                 </fusioncharts>
             </div>
 
-            <div class='chartCont border-right' id='daily-footfall-chart-container'>
+            <div class="chart-right" id='cs-chart-container'>
                 <fusioncharts
                     type= "area2d"
+                    renderAt= "cs-chart-container"
                     width={{keyMetrics.chartWidth}}
                     height={{keyMetrics.chartHeight}} 
                     dataFormat = "{{keyMetrics.dataType}}"
