@@ -35,15 +35,29 @@
 
         </div>
 
-        <div class='' id='daily-footfall-chart-container'>
-            <fusioncharts
-                type= "area2d"
-                width={{keyMetrics.chartWidth}}
-                height={{keyMetrics.chartHeight}} 
-                dataFormat = "{{keyMetrics.dataType}}"
-                dataSource="{{keyMetrics.dailyFootfallChart}}"    
-            >
-            </fusioncharts>
+        <div class="border-bottom">
+
+            <div class='chartCont border-right' id='daily-footfall-chart-container'>
+                <fusioncharts
+                    type= "area2d"
+                    width={{keyMetrics.chartWidth}}
+                    height={{keyMetrics.chartHeight}} 
+                    dataFormat = "{{keyMetrics.dataType}}"
+                    dataSource="{{keyMetrics.dailyFootfallChart}}"    
+                >
+                </fusioncharts>
+            </div>
+
+            <div class='chartCont border-right' id='daily-footfall-chart-container'>
+                <fusioncharts
+                    type= "area2d"
+                    width={{keyMetrics.chartWidth}}
+                    height={{keyMetrics.chartHeight}} 
+                    dataFormat = "{{keyMetrics.dataType}}"
+                    dataSource="{{keyMetrics.dailyFootfallChart}}"    
+                >
+                </fusioncharts>
+            </div>
         </div>
     </div>        
    
