@@ -1,4 +1,4 @@
-'use strict';
+/**'use strict';
 
 FusionCharts.ready(function () {
     var chartWidth = '550',
@@ -220,7 +220,7 @@ FusionCharts.ready(function () {
             width: chartWidth,
             height: chartHeight,
             dataFormat: dataType,
-            dataSource: {
+            dataSource:{
                 "chart":{
                     "caption":"Daily Footfalls",
                     "subcaption":"Last 3 weeks",
@@ -424,3 +424,5 @@ FusionCharts.ready(function () {
     }).render();
 
 });
+
+**/
