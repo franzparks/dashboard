@@ -13,10 +13,11 @@
         <div class='border-bottom'>
             <div class='chartCont border-right' id='sales-chart-container'>
             <fusioncharts
-                type= "column2d",
+                type= "column2d"
                 width={{keyMetrics.chartWidth}}
                 height={{keyMetrics.chartHeight}} 
                 dataFormat = "{{keyMetrics.dataType}}"
+                dataSource="{{keyMetrics.salesData}}"
             >
             </fusioncharts>
             </div>
