@@ -23,7 +23,16 @@
             </div>
 
 
-            <div class='chartCont' id='trans-chart-container'>FusionCharts will load here.</div>
+            <div class='chartCont' id='trans-chart-container'>
+            <fusioncharts
+                type= "area2d"
+                width={{keyMetrics.chartWidth}}
+                height={{keyMetrics.chartHeight}} 
+                dataFormat = "{{keyMetrics.dataType}}"
+                dataSource="{{keyMetrics.transChartData}}"    
+            >
+            </fusioncharts>
+            </div>
         </div>
     </div>        
 
