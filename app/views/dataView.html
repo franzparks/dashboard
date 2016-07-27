@@ -1,8 +1,8 @@
 <div class="row table-container">
     
-    {{usersTable}}
-	<table ng-table="usersTable" class="table table-striped">
-	   <tr ng-repeat="user in data">
+    {{dataView.tableParams}}
+	<table ng-table="dataView.tableParams" class="table table-striped" show-filter="true">
+	  <!-- <tr ng-repeat="user in data">
 	       <td data-title="'Id'" >
 	           {{user.id}}
 	       </td>
@@ -21,6 +21,12 @@
 	       <td data-title="'IP'" >
 	           {{user.ip_address}}
 	       </td>    
-	   </tr>
+	   </tr> -->
+	   <tr ng-repeat="user in $data">
+        <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+            {{user.name}}</td>
+        <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
+            {{user.age}}</td>
+    </tr>
 	</table>
 </div>
