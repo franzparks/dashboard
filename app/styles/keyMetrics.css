@@ -6,6 +6,8 @@ body {
     font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
 
+
+
 h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
@@ -106,4 +108,10 @@ h1, h2, h3, h4, h5 {
     color: black;
     padding: 5px 0;
     text-align: center;
+}
+
+.table-container {
+
+    width: 100%;
+    background-color: #ffffff;   
 }
