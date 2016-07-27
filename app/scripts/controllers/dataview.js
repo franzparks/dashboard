@@ -53,6 +53,7 @@ angular.module('corporateDashBoardApp')
 
         return new NgTableParams({}, settings);
     };*/
+  
 
     var self = this;
 	var data = [{name: "Moroni", age: 50} /*,*/];
