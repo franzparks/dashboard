@@ -8,14 +8,14 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('KeyMetricsCtrl', function () {
+  .controller('KeyMetricsCtrl',['getDataService', function (getDataService) {
 
 
   	this.chartWidth = '550';
     this.chartHeight = '300';
     this.dataType = 'json';
 
-	this.salesData = {};
+	this.salesData = getDataService.getSalesData();
 
 
 	this.transChartData = {
@@ -311,4 +311,4 @@ angular.module('corporateDashBoardApp')
                 ]
             };       
 
-  });
+  }]);
