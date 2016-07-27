@@ -8,7 +8,7 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('DataViewCtrl',['$scope','$filter', 'ngTableParams', function ($scope,$filter, ngTableParams) { //$filter, ngTableParams
+  .controller('DataViewCtrl',['$scope','$filter', 'NgTableParams', function ($scope,$filter, NgTableParams) { //$filter, ngTableParams
   	//var users = [];
 
     $scope.users = [{"id":1,"first_name":"Philip","last_name":"Kim","email":"pkim0@mediafire.com","country":"Indonesia","ip_address":"29.107.35.8"},
@@ -19,7 +19,7 @@ angular.module('corporateDashBoardApp')
     
     //var data = [];
 
-    $scope.usersTable = new ngTableParams({
+    /*$scope.usersTable = new NgTableParams({
                 page: 1,
                 count: 10
             }, {
@@ -27,16 +27,17 @@ angular.module('corporateDashBoardApp')
 
                 getData: function ($defer, params) {
                 	
-                	//$scope.data = params.sorting() ? $filter('orderBy')($scope.users, params.orderBy()) : $scope.users;
+                	$scope.data = params.sorting() ? $filter('orderBy')($scope.users, params.orderBy()) : $scope.users;
    					//$scope.data = params.filter() ? $filter('filter')($scope.data, params.filter()) : $scope.data;
                     //$scope.data = $scope.users.slice((params.page() - 1) * params.count(), params.page() * params.count());
-                    $defer.resolve($scope.data);
+                    //$defer.resolve($scope.data);
                     //params.total(users.length);
+                    $scope.data =  $scope.users;
                 
                 }
-            });
+            });*/
 
-     /*this.usersTable = function() {
+     this.usersTable = function() {
         var parameters = {
         	page: 1,
             count: 10
@@ -44,14 +45,14 @@ angular.module('corporateDashBoardApp')
 
         var settings = {
             getData: function ($defer,params) {
-            	var data = users.slice((params.page() - 1) * params.count(), params.page() * params.count());
+            	var data = $scope.users.slice((params.page() - 1) * params.count(), params.page() * params.count());
                 $defer.resolve(data);
-                params.total(users.length);
+                params.total($scope.users.length);
             }
         };
 
         return new NgTableParams(parameters, settings);
-    };*/
+    };
 
 
 

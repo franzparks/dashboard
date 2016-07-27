@@ -21,5 +21,8 @@
         "dist/js/bootstrap.js"
       ]
     }
+  },
+  "resolutions": {
+    "ng-table": "0.8.0"
   }
 }
