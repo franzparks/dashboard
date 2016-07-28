@@ -26,6 +26,8 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/fusioncharts/fusioncharts.js',
       'bower_components/ng-table/dist/ng-table.js',
+      'bower_components/papaparse/papaparse.js',
+      'bower_components/angular-papaparse/dist/js/angular-PapaParse.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
