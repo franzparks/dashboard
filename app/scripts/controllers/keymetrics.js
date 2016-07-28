@@ -18,24 +18,23 @@ angular.module('corporateDashBoardApp')
 	$scope.salesData = {};
 
     getDataService.getSalesData().then(function(response) {
-            // this callback will be called asynchronously
-            // when the response is available
-            var chartObject = {
-                "chart":{
-                    "caption":"Daily Revenue",
-                    "subcaption":"Last 3 weeks",
-                    "xaxisname":"Date",
-                    "yaxisname":"Revenue (In USD)",
-                    "numberprefix":"$",
-                    "showvalues":"0",
-                    "theme":"fint"
-                }
-            };
+        // this callback will be called asynchronously
+        // when the response is available
+        var chartObject = {
+            "chart":{
+                "caption":"Daily Revenue",
+                "subcaption":"Last 3 weeks",
+                "xaxisname":"Date",
+                "yaxisname":"Revenue (In USD)",
+                "numberprefix":"$",
+                "showvalues":"0",
+                "theme":"fint"
+            }
+        };
 
-            chartObject["data"] = response.data;
-            console.log(chartObject);
-            //return chartObject;
-            $scope.salesData = chartObject;
+        chartObject["data"] = response.data;
+     
+        $scope.salesData = chartObject;
         
     });
 
