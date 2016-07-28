@@ -8,8 +8,8 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('DataViewCtrl',['$scope','$filter', 'NgTableParams','getDataService',
-     function ($scope,$filter, NgTableParams,getDataService) {
+  .controller('DataViewCtrl',['$scope','$filter', 'NgTableParams','getDataService','Papa',
+     function ($scope,$filter, NgTableParams,getDataService,Papa) {
 
     //var self = this;
 	$scope.data = [];
@@ -21,6 +21,13 @@ angular.module('corporateDashBoardApp')
         $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
         
     });
+
+
+    Papa.parse(data, {
+        complete: function(results) {
+        console.log("Finished:", results.data);
+    }
+   });
 
 
   }]);
