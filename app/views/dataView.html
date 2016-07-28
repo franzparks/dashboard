@@ -4,9 +4,9 @@
 	
 	   <tr ng-repeat="user in $data">
         <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
-            {{user[0]}}</td>
+            {{user.name}}</td>
         <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
-            {{user[1]}}</td>
+            {{user.age}}</td>
     </tr>
 	</table>
 </div>
