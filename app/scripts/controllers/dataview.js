@@ -22,8 +22,5 @@ angular.module('corporateDashBoardApp')
         
     });
 
-	//$scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
-
-
 
   }]);
