@@ -26,26 +26,27 @@ angular.module('corporateDashBoardApp')
     	});
 	};
 
-this.getDailyFootfallChart = function(){
-	return $http({
-		method: "GET",
-		url : "../data/dailyfootfall.json"
-    });
-};
+	this.getDailyFootfallChart = function(){
+		return $http({
+			method: "GET",
+			url : "../data/dailyfootfall.json"
+	    });
+	};
 
-this.getDailyCSatChartData = function(){
-	return $http({
-		method: "GET",
-		url : "../data/dailysatchart.json"
-    });
-      
-};
+	this.getDailyCSatChartData = function(){
+		return $http({
+			method: "GET",
+			url : "../data/dailysatchart.json"
+	    });
+	      
+	};
 
-this.getGeoData = function(){
+	this.getGeoData = function(){
 
-	return $http({
-		method: "GET",
-		url : "../data/geochart.json"
-    });
+		return $http({
+			method: "GET",
+			url : "../data/geochart.json"
+	    });
+	};
 
 }]);
