@@ -8,10 +8,10 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('GeoCtrl',['getDataService', function (getDataService) {
+  .controller('GeoCtrl',['$scope','getDataService', function ($scope,getDataService) {
    
-    this.dataSource = {};
-    
+    $scope.dataSource = {};
+
     getDataService.getGeoData().then(function(response) {
        
         var chartObject = {
@@ -48,7 +48,7 @@ angular.module('corporateDashBoardApp')
 
         chartObject["data"] = response.data;
      
-        $scope.salesData = chartObject;
+        $scope.dataSource = chartObject;
         
     });
    
