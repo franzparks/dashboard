@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('corporateDashBoardApp', ['ui.router','ng-fusioncharts', 'ngTable','ngResource'])
+  .module('corporateDashBoardApp', ['ui.router','ng-fusioncharts', 'ngTable'])
 
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
