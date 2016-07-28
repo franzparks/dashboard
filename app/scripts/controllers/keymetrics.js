@@ -15,7 +15,9 @@ angular.module('corporateDashBoardApp')
     this.chartHeight = '300';
     this.dataType = 'json';
 
-	this.salesData = getDataService.getSalesData().then(function(data) {
+	$scope.salesData = {};
+
+    getDataService.getSalesData().then(function(data) {
             // this callback will be called asynchronously
             // when the response is available
             var chartObject = {
@@ -32,8 +34,8 @@ angular.module('corporateDashBoardApp')
 
             chartObject.data = data;
             console.log(chartObject);
-            return chartObject;
-            //data = chartObject;
+            //return chartObject;
+            $scope.salesData = chartObject;
         
     });
 
