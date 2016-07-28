@@ -16,6 +16,9 @@ angular.module('corporateDashBoardApp')
     this.dataType = 'json';
 
 	$scope.salesData = {};
+    $scope.transChartData = {};
+    $scope.dailyFootfallChart = {};
+    $scope.dailyCSatChart = {};
 
     getDataService.getSalesData().then(function(response) {
         // this callback will be called asynchronously
@@ -39,8 +42,6 @@ angular.module('corporateDashBoardApp')
     });
 
 
-	$scope.transChartData = {};
-
     getDataService.getTransChartData().then(function(response) {
        
         var chartObject = {
@@ -57,12 +58,9 @@ angular.module('corporateDashBoardApp')
 
         chartObject["data"] = response.data;
      
-        $scope.salesData = chartObject;
+        $scope.transChartData = chartObject;
         
     });
-
-
-    this.dailyFootfallChart = {};
 
     getDataService.getDailyFootfallChart().then(function(response) {
        
@@ -80,12 +78,9 @@ angular.module('corporateDashBoardApp')
 
         chartObject["data"] = response.data;
      
-        $scope.salesData = chartObject;
+        $scope.dailyFootfallChart = chartObject;
         
     });
-
-
-    this.dailyCSatChart = {};
 
     getDataService.getDailyCSatChartData().then(function(response) {
        
@@ -104,7 +99,7 @@ angular.module('corporateDashBoardApp')
 
         chartObject["data"] = response.data;
      
-        $scope.salesData = chartObject;
+        $scope.dailyCSatChart = chartObject;
         
     });
 
