@@ -17,7 +17,6 @@ angular.module('corporateDashBoardApp')
     		method: "GET",
     		url : "../data/keyMetrics.json"
     	});
-
 	};
 
 	this.getTransChartData = function(){
@@ -25,32 +24,13 @@ angular.module('corporateDashBoardApp')
     		method: "GET",
     		url : "../data/transchartdata.json"
     	});
-
-		return {
-	        "chart":{
-                "caption":"Daily Revenue",
-                "subcaption":"Last 3 weeks",
-                "xaxisname":"Date",
-                "yaxisname":"Revenue (In USD)",
-                "numberprefix":"$",
-                "showvalues":"0",
-                "theme":"fint"
-            }
-	    };
 	};
 
 this.getDailyFootfallChart = function(){
-	return {
-        "chart":{
-            "caption":"Daily Footfalls",
-            "subcaption":"Last 3 weeks",
-            "xaxisname":"Date",
-            "yaxisname":"No. of Footfalls",
-            "showvalues":"0",
-            "theme":"fint"},
-            
-        "data":
-    };
+	return $http({
+		method: "GET",
+		url : "../data/dailyfootfall.json"
+    });
 };
 
 this.getDailyCSatChartData = function(){
