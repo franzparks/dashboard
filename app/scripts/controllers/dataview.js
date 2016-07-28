@@ -26,6 +26,8 @@ angular.module('corporateDashBoardApp')
     Papa.parse("../data/dataview.csv", {
         complete: function(results) {
         console.log("Finished:", results.data);
+        $scope.data = results.data;
+        $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
     }
    });
 
