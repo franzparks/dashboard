@@ -34,20 +34,11 @@ this.getDailyFootfallChart = function(){
 };
 
 this.getDailyCSatChartData = function(){
-
-	return {
-
-        "chart":{
-            "caption":"Daily Customer Satisfaction Trend for Last 3 weeks",
-            "subcaption":"On a scale of 0 to 5",
-            "xaxisname":"Date",
-            "yaxisname":"Customer Satisfaction Index",
-            "yaxismaxvalue":"5",
-            "showvalues":"0",
-            "theme":"fint"
-        },		
-        "data":
-    };       
+	return $http({
+		method: "GET",
+		url : "../data/dailysatchart.json"
+    });
+      
 };
 
 this.getGeoData = function(){
