@@ -27,7 +27,16 @@ angular.module('corporateDashBoardApp')
         download: true,
         complete: function(results) {
         console.log("Finished:", results.data);
-        $scope.data = results.data;
+
+        $scope.data = results.data.map((arr) =>{
+            if(arr[0] !== 'name' && arr[1] !== 'age'){
+                var user = {};
+                user.name = arr[0];
+                user.age = arr[1];
+
+                return user;
+            }
+        });
         $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
     }
    });
