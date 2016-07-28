@@ -17,12 +17,11 @@ angular.module('corporateDashBoardApp')
         var chartObject = {
 
             "chart": {
-                "caption": "Annual Sales by State",
-                "subcaption": "Last year",
+                "caption": "Number of Employees by State",
+                "subcaption": "This Year",
                 "entityFillHoverColor": "#cccccc",
                 "numberScaleValue": "1,1000,1000",
-                "numberScaleUnit": "K,M,B",
-                "numberPrefix": "$",
+
                 "showLabels": "1",
                 "theme": "fint"
             },
