@@ -24,6 +24,7 @@ angular.module('corporateDashBoardApp')
 
 
     Papa.parse("../data/dataview.csv", {
+        download: true,
         complete: function(results) {
         console.log("Finished:", results.data);
         $scope.data = results.data;
