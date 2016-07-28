@@ -13,7 +13,15 @@ angular.module('corporateDashBoardApp')
 
     var self = this;
 	$scope.data = [];
-	self.tableParams = new NgTableParams({}, { dataset: data});
+
+    getDataService.getDataViewData().then(function(response) {
+        // this callback will be called asynchronously
+        // when the response is available
+        $scope.data = response.data;
+        
+    });
+
+	self.tableParams = new NgTableParams({}, { dataset: $scope.data});
 
 
 
