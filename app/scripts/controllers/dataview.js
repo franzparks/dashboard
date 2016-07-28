@@ -14,16 +14,16 @@ angular.module('corporateDashBoardApp')
     //var self = this;
 	$scope.data = [];
 
-    getDataService.getDataViewData().then(function(response) {
+    //getDataService.getDataViewData().then(function(response) {
         // this callback will be called asynchronously
         // when the response is available
-        $scope.data = response.data;
-        $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
+    //    $scope.data = response.data;
+    //    $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
         
-    });
+    //});
 
 
-    Papa.parse(data, {
+    Papa.parse("../data/dataview.csv", {
         complete: function(results) {
         console.log("Finished:", results.data);
     }
