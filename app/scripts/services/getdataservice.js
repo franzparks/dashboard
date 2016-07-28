@@ -49,4 +49,12 @@ angular.module('corporateDashBoardApp')
 	    });
 	};
 
+	this.getDataViewData = function(){
+
+		return $http({
+			method: "GET",
+			url : "../data/dataview.json"
+	    });
+	};
+
 }]);
