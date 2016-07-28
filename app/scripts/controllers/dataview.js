@@ -26,7 +26,7 @@ angular.module('corporateDashBoardApp')
     Papa.parse("../data/dataview.csv", {
         download: true,
         complete: function(results) {
-        console.log("Finished:", results.data);
+        //console.log("Finished:", results.data);
 
         $scope.data = results.data.map((arr) =>{
             if(arr[0] !== 'name' && arr[1] !== 'age'){
