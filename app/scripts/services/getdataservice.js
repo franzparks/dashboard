@@ -43,37 +43,9 @@ this.getDailyCSatChartData = function(){
 
 this.getGeoData = function(){
 
-	return {
-            "chart": {
-                "caption": "Annual Sales by State",
-                "subcaption": "Last year",
-                "entityFillHoverColor": "#cccccc",
-                "numberScaleValue": "1,1000,1000",
-                "numberScaleUnit": "K,M,B",
-                "numberPrefix": "$",
-                "showLabels": "1",
-                "theme": "fint"
-            },
-            "colorrange": {
-                "minvalue": "0",
-                "startlabel": "Low",
-                "endlabel": "High",
-                "code": "#e44a00",
-                "gradient": "1",
-                "color": [
-                    {
-                        "maxvalue": "56580",
-                        "displayvalue": "Average",
-                        "code": "#f8bd19"
-                    },
-                    {
-                        "maxvalue": "100000",
-                        "code": "#6baa01"
-                    }
-                ]
-            },
-            "data": 
-        }; 
-};
+	return $http({
+		method: "GET",
+		url : "../data/geochart.json"
+    });
 
 }]);

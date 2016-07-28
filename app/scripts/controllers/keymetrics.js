@@ -39,10 +39,73 @@ angular.module('corporateDashBoardApp')
     });
 
 
-	this.transChartData = getDataService.getTransChartData(); 
+	$scope.transChartData = {};
 
-    this.dailyFootfallChart = getDataService.getDailyFootfallChart();
+    getDataService.getTransChartData().then(function(response) {
+       
+        var chartObject = {
+            "chart":{
+                "caption":"Daily Revenue",
+                "subcaption":"Last 3 weeks",
+                "xaxisname":"Date",
+                "yaxisname":"Revenue (In USD)",
+                "numberprefix":"$",
+                "showvalues":"0",
+                "theme":"fint"
+            }
+        };
 
-    this.dailyCSatChart = getDataService.getDailyCSatChartData();
+        chartObject["data"] = response.data;
+     
+        $scope.salesData = chartObject;
+        
+    });
+
+
+    this.dailyFootfallChart = {};
+
+    getDataService.getDailyFootfallChart().then(function(response) {
+       
+        var chartObject = {
+
+            "chart": {
+                "caption":"Daily Footfalls",
+                "subcaption":"Last 3 weeks",
+                "xaxisname":"Date",
+                "yaxisname":"No. of Footfalls",
+                "showvalues":"0",
+                "theme":"fint"
+            }
+        };
+
+        chartObject["data"] = response.data;
+     
+        $scope.salesData = chartObject;
+        
+    });
+
+
+    this.dailyCSatChart = {};
+
+    getDataService.getDailyCSatChartData().then(function(response) {
+       
+        var chartObject = {
+
+            "chart": {
+                "caption":"Daily Customer Satisfaction Trend for Last 3 weeks",
+                "subcaption":"On a scale of 0 to 5",
+                "xaxisname":"Date",
+                "yaxisname":"Customer Satisfaction Index",
+                "yaxismaxvalue":"5",
+                "showvalues":"0",
+                "theme":"fint"
+            }
+        };
+
+        chartObject["data"] = response.data;
+     
+        $scope.salesData = chartObject;
+        
+    });
 
   }]);
