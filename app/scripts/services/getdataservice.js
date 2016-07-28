@@ -8,7 +8,7 @@
  * Service in the corporateDashBoardApp.
  */
 angular.module('corporateDashBoardApp')
-  .service('getDataService', function () {
+  .service('getDataService',['$resource', function ($resource) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     this.getSalesData = function(){
@@ -655,4 +655,4 @@ this.getGeoData = function(){
         }; 
 };
 
-});
+}]);
