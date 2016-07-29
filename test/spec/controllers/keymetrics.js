@@ -1,6 +1,6 @@
 'use strict';
 
-xdescribe('Controller: KeymetricsctrlCtrl', function () {
+describe('Controller: KeymetricsctrlCtrl', function () {
 
   // load the controller's module
   beforeEach(module('corporateDashBoardApp'));
@@ -14,10 +14,12 @@ xdescribe('Controller: KeymetricsctrlCtrl', function () {
     KeymetricsctrlCtrl = $controller('KeymetricsctrlCtrl', {
       $scope: scope
       // place here mocked dependencies
+      
     });
   }));
 
-  xit('should attach a list of awesomeThings to the scope', function () {
-    expect('KeymetricsctrlCtrl').toEqual('KeymetricsctrlCtrl');
+  it('should attach a list of awesomeThings to the scope', function () {
+    var num = 4;
+    expect(num).toBe(4);
   });
 });
