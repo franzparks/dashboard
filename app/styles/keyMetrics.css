@@ -19,14 +19,13 @@ h1, h2, h3, h4, h5 {
 
 .flex-container {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
 
 .chartCont {
     margin: 0px 12px;
-    flex-direction: row;
-    flex-wrap: wrap;  
 }
 
 .chart-left {

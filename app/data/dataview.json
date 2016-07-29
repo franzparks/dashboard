@@ -1,20 +1,15 @@
 [
-	{"name": "Moroni1", "age": 50},
-	{"name": "Moroni2", "age": 51},
-	{"name": "Moroni3", "age": 52},
-	{"name": "Moroni4", "age": 53},
-	{"name": "Moroni5", "age": 54},
-	{"name": "Moroni6", "age": 55},
-	{"name": "Moroni7", "age": 56},
-	{"name": "Moroni8", "age": 57},
-	{"name": "Moroni10", "age": 58},
-	{"name": "Moroni11", "age": 59},
-	{"name": "Moroni12", "age": 40},
-	{"name": "Moroni13", "age": 41},
-	{"name": "Moroni14", "age": 42},
-	{"name": "Moroni15", "age": 43},
-	{"name": "Moroni16", "age": 44},
-	{"name": "Moroni17", "age": 45},
-	{"name": "Moroni18", "age": 56}
+	{"name": "issue1", "priority": 1, "severity" : 3, "status" : "open"},
+	{"name": "issue2", "priority": 2, "severity" : 4, "status" : "open"},
+	{"name": "issue3", "priority": 1, "severity" : 1, "status" : "fixed"},
+	{"name": "issue4", "priority": 3, "severity" : 3, "status" : "closed"},
+	{"name": "issue5", "priority": 1, "severity" : 3, "status" : "open"},
+	{"name": "issue6", "priority": 2, "severity" : 4, "status" : "open"},
+	{"name": "issue7", "priority": 1, "severity" : 1, "status" : "fixed"},
+	{"name": "issue8", "priority": 3, "severity" : 3, "status" : "closed"},
+	{"name": "issue9", "priority": 1, "severity" : 3, "status" : "open"},
+	{"name": "issue10", "priority": 2, "severity" : 4, "status" : "open"},
+	{"name": "issue11", "priority": 1, "severity" : 1, "status" : "fixed"},
+	{"name": "issue12", "priority": 3, "severity" : 3, "status" : "closed"}
 	
 ]
