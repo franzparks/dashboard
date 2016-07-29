@@ -25,11 +25,10 @@ angular.module('corporateDashBoardApp')
         // when the response is available
         var chartObject = {
             "chart":{
-                "caption":"Daily Revenue",
-                "subcaption":"Last 3 weeks",
+                "caption":"Number Of Reported Issues",
+                "subcaption":"In The Last 3 weeks",
                 "xaxisname":"Date",
-                "yaxisname":"Revenue (In USD)",
-                "numberprefix":"$",
+                "yaxisname":"Reported Issues",
                 "showvalues":"0",
                 "theme":"fint"
             }
@@ -67,7 +66,7 @@ angular.module('corporateDashBoardApp')
         var chartObject = {
 
             "chart": {
-                "caption":"Number Open Issues",
+                "caption":"Number Of Open Issues",
                 "subcaption":"Last 3 weeks",
                 "xaxisname":"Date",
                 "yaxisname":"No. Of Open Issues",
