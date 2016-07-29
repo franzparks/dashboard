@@ -1,28 +1,28 @@
 <div class="row table-container1">
     <div><h2>All Issues View</h2></div>
 	<table ng-table="tableParams" class="ui unstackable table" show-filter="true">
-	
+    
 	   <tr ng-repeat="issue in $data">
-        <td title="'Customer Name'" filter="{ priority: 'number'}" sortable="'priority'">
-            {{issue.priority}}
+        <td title="'Customer Name'" filter="{ customer_name: 'text'}" sortable="'customer_name'">
+            {{issue.customer_name}}
         </td>
-        <td title="'Customer Email'" filter="{ severity: 'number'}" sortable="'severity'">
-            {{issue.severity}}
+        <td title="'Customer Email'" filter="{ customer_email: 'text'}" >
+            {{issue.customer_email}}
         </td>
-        <td title="'Employee Name'" filter="{ status: 'text'}" sortable="'status'">
+        <td title="'Employee Name'" filter="{ employee_name: 'text'}" sortable="'employee_name'">
+            {{issue.employee_name}}
+        </td>
+        <td title="'Issue Description'" filter="{ issue_description: 'text'}" >
+            {{issue.issue_description}}
+        </td>
+        <td title="'Submmission Time'" filter="{ submission_time: 'text'}" sortable="'submission_time'">
+            {{issue.submission_time}}
+        </td>
+        <td title="'Issue Status'" filter="{ status: 'text'}" sortable="'text'">
             {{issue.status}}
         </td>
-        <td title="'Issue Description'" filter="{ status: 'text'}" sortable="'status'">
-            {{issue.status}}
-        </td>
-        <td title="'Submmission Time'" filter="{ name: 'text'}" sortable="'name'">
-            {{issue.name}}
-        </td>
-        <td title="'Issue Status'" filter="{ priority: 'number'}" sortable="'priority'">
-            {{issue.status}}
-        </td>
-        <td title="'Close Time'" filter="{ severity: 'number'}" sortable="'severity'">
-            {{issue.severity}}
+        <td title="'Close Time'" filter="{ close_time: 'text'}" sortable="'close_time'">
+            {{issue.close_time}}
         </td>
         
     </tr>
