@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: getDataService', function () {
+xdescribe('Service: getDataService', function () {
 
   // load the service's module
   beforeEach(module('corporateDashBoardApp'));
@@ -11,9 +11,9 @@ describe('Service: getDataService', function () {
     getDataService = _getDataService_;
   }));
 
-  //it('should do something', function () {
+  xit('should do something', function () {
     //expect(!!getDataService).toBe(true);
-    //expect(true).toBe(true);
-  //});
+    expect('').toEqual('');
+  });
 
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: KeymetricsctrlCtrl', function () {
+xdescribe('Controller: KeymetricsctrlCtrl', function () {
 
   // load the controller's module
   beforeEach(module('corporateDashBoardApp'));
@@ -17,7 +17,7 @@ describe('Controller: KeymetricsctrlCtrl', function () {
     });
   }));
 
-  //it('should attach a list of awesomeThings to the scope', function () {
-    //expect(KeymetricsctrlCtrl.awesomeThings.length).toBe(3);
-  //});
+  xit('should attach a list of awesomeThings to the scope', function () {
+    expect('KeymetricsctrlCtrl').toEqual('KeymetricsctrlCtrl');
+  });
 });
