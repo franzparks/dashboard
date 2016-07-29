@@ -8,9 +8,17 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('GeoCtrl',['$scope','getDataService', function ($scope,getDataService) {
+  .controller('GeoCtrl',['$scope','$timeout','getDataService', function ($scope,$timeout,getDataService) {
    
     $scope.dataSource = {};
+
+    var poll = function() {
+        $timeout(function() {
+            $scope.value++;
+            poll();
+        }, 1000);
+    };     
+   poll();
 
     getDataService.getGeoData().then(function(response) {
        
