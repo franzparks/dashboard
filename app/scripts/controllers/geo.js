@@ -8,55 +8,60 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('GeoCtrl',['$scope','$timeout','getDataService', function ($scope,$timeout,getDataService) {
+  .controller('GeoCtrl',['$scope','$interval','getDataService', function ($scope,$interval,getDataService) {
    
     $scope.dataSource = {};
 
-    var poll = function() {
-        $timeout(function() {
-            $scope.value++;
-            poll();
-        }, 1000);
-    };     
-   poll();
+    var refreshData = function(){
+        getDataService.getGeoData().then(function(response) {
+           
+            var chartObject = {
 
-    getDataService.getGeoData().then(function(response) {
-       
-        var chartObject = {
+                'chart': {
+                    'caption': 'Number of Employees by State',
+                    'subcaption': 'This Year',
+                    'entityFillHoverColor': '#cccccc',
+                    'numberScaleValue': '1,1000,1000',
 
-            'chart': {
-                'caption': 'Number of Employees by State',
-                'subcaption': 'This Year',
-                'entityFillHoverColor': '#cccccc',
-                'numberScaleValue': '1,1000,1000',
+                    'showLabels': '1',
+                    'theme': 'fint'
+                },
+                'colorrange': {
+                    'minvalue': '0',
+                    'startlabel': 'Low',
+                    'endlabel': 'High',
+                    'code': '#e44a00',
+                    'gradient': '1',
+                    'color': [
+                        {
+                            'maxvalue': '56580',
+                            'displayvalue': 'Average',
+                            'code': '#f8bd19'
+                        },
+                        {
+                            'maxvalue': '100000',
+                            'code': '#6baa01'
+                        }
+                    ]
+                }
+            };
 
-                'showLabels': '1',
-                'theme': 'fint'
-            },
-            'colorrange': {
-                'minvalue': '0',
-                'startlabel': 'Low',
-                'endlabel': 'High',
-                'code': '#e44a00',
-                'gradient': '1',
-                'color': [
-                    {
-                        'maxvalue': '56580',
-                        'displayvalue': 'Average',
-                        'code': '#f8bd19'
-                    },
-                    {
-                        'maxvalue': '100000',
-                        'code': '#6baa01'
-                    }
-                ]
-            }
-        };
+            chartObject.data = response.data;
+         
+            $scope.dataSource = chartObject;
+            
+        });
+    };
+    
+    var promise = $interval(refreshData, 1000); 
 
-        chartObject.data = response.data;
-     
-        $scope.dataSource = chartObject;
-        
-    });
+    // Cancel interval on page changes
+    $scope.$on('$destroy', function(){
+        if (angular.isDefined(promise)) {
+            $interval.cancel(promise);
+            promise = undefined;
+        }
+    });   
+
    
   }]);
