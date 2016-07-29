@@ -23,15 +23,15 @@ angular.module('corporateDashBoardApp')
     //});
 
     var refreshData = function(){
-        Papa.parse('../data/MOCK_DATA.csv', {
+        Papa.Papa.parse('../data/MOCK_DATA.csv', {
             download: true,
             complete: function(results) {
             //console.log("Finished:", results.data);
             //customer_name,customer_email,employee_name,submission_time,status,close_time,issue_description
             $scope.data = results.data.map(function(arr){
-                if(arr[0] !== 'customer_name' && arr[1] !== 'customer_email' && 
-                    arr[2] !== 'employee_name' && arr[3] !== 'submission_time' &&
-                     arr[4] !== 'status' && arr[5] !== 'close_time' && arr[6] !== 'issue_description' ){
+                if(arr[0] !== 'customer_name' && arr[1] !== 'customer_email'
+                    && arr[2] !== 'employee_name' && arr[3] !== 'submission_time' 
+                    && arr[4] !== 'status' && arr[5] !== 'close_time' && arr[6] !== 'issue_description' ){
                     var user = {};
                     user.customer_name = arr[0];
                     user.customer_email = arr[1];
@@ -48,6 +48,7 @@ angular.module('corporateDashBoardApp')
         }
        });
     };
+    
     
 
     var promise = $interval(refreshData, 1000); 
