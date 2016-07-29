@@ -8,7 +8,7 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('KeyMetricsCtrl',['$scope', 'getDataService', function ($scope, getDataService) {
+  .controller('KeyMetricsCtrl',['$scope','$interval','getDataService', function ($scope,$interval,getDataService) {
 
 
   	this.chartWidth = '100%';
@@ -19,66 +19,80 @@ angular.module('corporateDashBoardApp')
     $scope.openIssuesData = {};
     $scope.payingCustomersData = {};
 
-    getDataService.getReportedIssuesChartData().then(function(response) {
-        // this callback will be called asynchronously
-        // when the response is available
-        var chartObject = {
-            'chart':{
-                'caption':'Number Of Reported Issues',
-                'subcaption':'In The Last 3 weeks',
-                'xaxisname':'Date',
-                'yaxisname':'Reported Issues',
-                'showvalues':'0',
-                'theme':'fint'
-            }
-        };
+    var refreshData = function(){
 
-        chartObject.data = response.data;
-     
-        $scope.reportedIssuesData = chartObject;
-        
-    });
+        getDataService.getReportedIssuesChartData().then(function(response) {
+            // this callback will be called asynchronously
+            // when the response is available
+            var chartObject = {
+                'chart':{
+                    'caption':'Number Of Reported Issues',
+                    'subcaption':'In The Last 3 weeks',
+                    'xaxisname':'Date',
+                    'yaxisname':'Reported Issues',
+                    'showvalues':'0',
+                    'theme':'fint'
+                }
+            };
+
+            chartObject.data = response.data;
+         
+            $scope.reportedIssuesData = chartObject;
+            
+        });
 
 
-    getDataService.getOpenIssuesChartData().then(function(response) {
-       
-        var chartObject = {
+        getDataService.getOpenIssuesChartData().then(function(response) {
+           
+            var chartObject = {
 
-            'chart': {
-                'caption':'Number Of Open Issues',
-                'subcaption':'Last 3 weeks',
-                'xaxisname':'Date',
-                'yaxisname':'No. Of Open Issues',
-                'showvalues':'0',
-                'theme':'fint'
-            }
-        };
+                'chart': {
+                    'caption':'Number Of Open Issues',
+                    'subcaption':'Last 3 weeks',
+                    'xaxisname':'Date',
+                    'yaxisname':'No. Of Open Issues',
+                    'showvalues':'0',
+                    'theme':'fint'
+                }
+            };
 
-        chartObject.data = response.data;
-     
-        $scope.openIssuesData = chartObject;
-        
-    });
+            chartObject.data = response.data;
+         
+            $scope.openIssuesData = chartObject;
+            
+        });
 
-    getDataService.getPayingCustomersChartData().then(function(response) {
-       
-        var chartObject = {
+        getDataService.getPayingCustomersChartData().then(function(response) {
+           
+            var chartObject = {
 
-            'chart': {
-                'caption':'Number of Paying Customers',
-                'subcaption':'Last 3 weeks',
-                'xaxisname':'Date',
-                'yaxisname':'Paying Customer Index',
-                'yaxismaxvalue':'15000',
-                'showvalues':'0',
-                'theme':'fint'
-            }
-        };
+                'chart': {
+                    'caption':'Number of Paying Customers',
+                    'subcaption':'Last 3 weeks',
+                    'xaxisname':'Date',
+                    'yaxisname':'Paying Customer Index',
+                    'yaxismaxvalue':'15000',
+                    'showvalues':'0',
+                    'theme':'fint'
+                }
+            };
 
-        chartObject.data = response.data;
-     
-        $scope.payingCustomersData = chartObject;
-        
-    });
+            chartObject.data = response.data;
+         
+            $scope.payingCustomersData = chartObject;
+            
+        });
+
+    };
+    
+    var promise = $interval(refreshData, 1000); 
+
+    // Cancel interval on page changes
+    $scope.$on('$destroy', function(){
+        if (angular.isDefined(promise)) {
+            $interval.cancel(promise);
+            promise = undefined;
+        }
+    });     
 
   }]);
