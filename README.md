@@ -21,5 +21,5 @@ which automatically updates view when data changes in the controller (which gets
 
 * on the terminal, run `grunt serve`
 
-* to build, run `grunt`
+* to build ( and minify assets), run `grunt`
 
