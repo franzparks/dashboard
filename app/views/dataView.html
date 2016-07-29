@@ -3,28 +3,28 @@
 	<table ng-table="tableParams" class="ui unstackable table" show-filter="true">
 	
 	   <tr ng-repeat="issue in $data">
-        <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+        <td title="'Customer Name'" filter="{ priority: 'number'}" sortable="'priority'">
+            {{issue.priority}}
+        </td>
+        <td title="'Customer Email'" filter="{ severity: 'number'}" sortable="'severity'">
+            {{issue.severity}}
+        </td>
+        <td title="'Employee Name'" filter="{ status: 'text'}" sortable="'status'">
+            {{issue.status}}
+        </td>
+        <td title="'Description'" filter="{ status: 'text'}" sortable="'status'">
+            {{issue.status}}
+        </td>
+        <td title="'Submmission Time'" filter="{ name: 'text'}" sortable="'name'">
             {{issue.name}}
         </td>
-        <td title="'Priority'" filter="{ priority: 'number'}" sortable="'priority'">
+        <td title="'Status'" filter="{ priority: 'number'}" sortable="'priority'">
             {{issue.priority}}
         </td>
-        <td title="'Severity'" filter="{ severity: 'number'}" sortable="'severity'">
+        <td title="'Close Time'" filter="{ severity: 'number'}" sortable="'severity'">
             {{issue.severity}}
         </td>
-        <td title="'Status'" filter="{ status: 'text'}" sortable="'status'">
-            {{issue.status}}
-        </td>
-
-        <td title="'Priority'" filter="{ priority: 'number'}" sortable="'priority'">
-            {{issue.priority}}
-        </td>
-        <td title="'Severity'" filter="{ severity: 'number'}" sortable="'severity'">
-            {{issue.severity}}
-        </td>
-        <td title="'Status'" filter="{ status: 'text'}" sortable="'status'">
-            {{issue.status}}
-        </td>
+        
     </tr>
 	</table>
 </div>
