@@ -67,7 +67,7 @@ angular.module('corporateDashBoardApp')
         var chartObject = {
 
             "chart": {
-                "caption":"Open Issues",
+                "caption":"Number Open Issues",
                 "subcaption":"Last 3 weeks",
                 "xaxisname":"Date",
                 "yaxisname":"No. Of Open Issues",
