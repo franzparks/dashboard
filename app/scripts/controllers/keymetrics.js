@@ -62,7 +62,7 @@ angular.module('corporateDashBoardApp')
         
     });
 
-    getDataService.getDailyFootfallChart().then(function(response) {
+    getDataService.getDailyOpenIssuesChart().then(function(response) {
        
         var chartObject = {
 
@@ -70,7 +70,7 @@ angular.module('corporateDashBoardApp')
                 "caption":"Open Issues",
                 "subcaption":"Last 3 weeks",
                 "xaxisname":"Date",
-                "yaxisname":"No. of Open Issues",
+                "yaxisname":"No. Of Open Issues",
                 "showvalues":"0",
                 "theme":"fint"
             }

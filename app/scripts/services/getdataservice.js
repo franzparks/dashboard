@@ -26,10 +26,10 @@ angular.module('corporateDashBoardApp')
     	});
 	};
 
-	this.getDailyFootfallChart = function(){
+	this.getDailyOpenIssuesChart = function(){
 		return $http({
 			method: "GET",
-			url : "../data/dailyfootfall.json"
+			url : "../data/openissues.json"
 	    });
 	};
 
