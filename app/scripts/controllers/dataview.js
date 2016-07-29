@@ -29,10 +29,12 @@ angular.module('corporateDashBoardApp')
         //console.log("Finished:", results.data);
 
         $scope.data = results.data.map((arr) =>{
-            if(arr[0] !== 'name' && arr[1] !== 'age'){
+            if(arr[0] !== 'name' && arr[1] !== 'priority' && arr[2] !== 'severity' && arr[3] !== 'status' ){
                 var user = {};
                 user.name = arr[0];
-                user.age = arr[1];
+                user.priority = arr[1];
+                user.severity = arr[2];
+                user.status = arr[3];
 
                 return user;
             }
