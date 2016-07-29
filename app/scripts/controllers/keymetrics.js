@@ -87,11 +87,11 @@ angular.module('corporateDashBoardApp')
         var chartObject = {
 
             "chart": {
-                "caption":"Daily Customer Satisfaction Trend for Last 3 weeks",
-                "subcaption":"On a scale of 0 to 5",
+                "caption":"Number of Paying Customers",
+                "subcaption":"Last 3 weeks",
                 "xaxisname":"Date",
                 "yaxisname":"Customer Satisfaction Index",
-                "yaxismaxvalue":"5",
+                "yaxismaxvalue":"15000",
                 "showvalues":"0",
                 "theme":"fint"
             }
