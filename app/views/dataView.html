@@ -4,9 +4,17 @@
 	
 	   <tr ng-repeat="user in $data">
         <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
-            {{user.name}}</td>
-        <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
-            {{user.age}}</td>
+            {{user.name}}
+        </td>
+        <td title="'Priority'" filter="{ priority: 'number'}" sortable="'priority'">
+            {{user.priority}}
+        </td>
+        <td title="'Severity'" filter="{ severity: 'number'}" sortable="'severity'">
+            {{user.severity}}
+        </td>
+        <td title="'Status'" filter="{ status: 'text'}" sortable="'status'">
+            {{user.status}}
+        </td>
     </tr>
 	</table>
 </div>
