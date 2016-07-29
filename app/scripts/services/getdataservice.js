@@ -14,29 +14,29 @@ angular.module('corporateDashBoardApp')
 	this.getReportedIssuesChartData = function(){
 
     	return $http({
-    		method: "GET",
-    		url : "../data/reportedissues.json"
+    		method: 'GET',
+    		url : '../data/reportedissues.json'
     	});
 	};
 
 	this.getTransChartData = function(){
 		return $http({
-    		method: "GET",
-    		url : "../data/transchartdata.json"
+    		method: 'GET',
+    		url : '../data/transchartdata.json'
     	});
 	};
 
 	this.getOpenIssuesChartData = function(){
 		return $http({
-			method: "GET",
-			url : "../data/openissues.json"
+			method: 'GET',
+			url : '../data/openissues.json'
 	    });
 	};
 
 	this.getPayingCustomersChartData = function(){
 		return $http({
-			method: "GET",
-			url : "../data/payingcustomers.json"
+			method: 'GET',
+			url : '../data/payingcustomers.json'
 	    });
 	      
 	};
@@ -44,16 +44,16 @@ angular.module('corporateDashBoardApp')
 	this.getGeoData = function(){
 
 		return $http({
-			method: "GET",
-			url : "../data/geochart.json"
+			method: 'GET',
+			url : '../data/geochart.json'
 	    });
 	};
 
 	this.getDataViewData = function(){
 
 		return $http({
-			method: "GET",
-			url : "../data/dataview.json"
+			method: 'GET',
+			url : '../data/dataview.json'
 	    });
 	};
 
