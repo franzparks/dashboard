@@ -90,7 +90,7 @@ angular.module('corporateDashBoardApp')
                 "caption":"Number of Paying Customers",
                 "subcaption":"Last 3 weeks",
                 "xaxisname":"Date",
-                "yaxisname":"Customer Satisfaction Index",
+                "yaxisname":"Paying Customer Index",
                 "yaxismaxvalue":"15000",
                 "showvalues":"0",
                 "theme":"fint"
