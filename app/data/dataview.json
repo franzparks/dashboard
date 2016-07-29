@@ -1,15 +1,5 @@
 [
-	{"name": "issue1", "priority": 1, "severity" : 3, "status" : "open"},
-	{"name": "issue2", "priority": 2, "severity" : 4, "status" : "open"},
-	{"name": "issue3", "priority": 1, "severity" : 1, "status" : "fixed"},
-	{"name": "issue4", "priority": 3, "severity" : 3, "status" : "closed"},
-	{"name": "issue5", "priority": 1, "severity" : 3, "status" : "open"},
-	{"name": "issue6", "priority": 2, "severity" : 4, "status" : "open"},
-	{"name": "issue7", "priority": 1, "severity" : 1, "status" : "fixed"},
-	{"name": "issue8", "priority": 3, "severity" : 3, "status" : "closed"},
-	{"name": "issue9", "priority": 1, "severity" : 3, "status" : "open"},
-	{"name": "issue10", "priority": 2, "severity" : 4, "status" : "open"},
-	{"name": "issue11", "priority": 1, "severity" : 1, "status" : "fixed"},
-	{"name": "issue12", "priority": 3, "severity" : 3, "status" : "closed"}
+	{"customer_name": "cust1", "customer_email": "em@fr.org", "employee_name" : "john doe", "submission_time" : "10:00 AM", "status":"open", "close_time":"06:00PM"},
+	
 	
 ]
