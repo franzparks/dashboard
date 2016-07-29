@@ -41,26 +41,6 @@ angular.module('corporateDashBoardApp')
     });
 
 
-    getDataService.getTransChartData().then(function(response) {
-       
-        var chartObject = {
-            "chart":{
-                "caption":"Daily Revenue",
-                "subcaption":"Last 3 weeks",
-                "xaxisname":"Date",
-                "yaxisname":"Revenue (In USD)",
-                "numberprefix":"$",
-                "showvalues":"0",
-                "theme":"fint"
-            }
-        };
-
-        chartObject["data"] = response.data;
-     
-        $scope.transChartData = chartObject;
-        
-    });
-
     getDataService.getOpenIssuesChartData().then(function(response) {
        
         var chartObject = {
