@@ -15,10 +15,9 @@ angular.module('corporateDashBoardApp')
     this.chartHeight = '300';
     this.dataType = 'json';
 
-	$scope.salesData = {};
-    $scope.transChartData = {};
-    $scope.dailyFootfallChart = {};
-    $scope.dailyCSatChart = {};
+	$scope.reportedIssuesData = {};
+    $scope.openIssuesData = {};
+    $scope.payingCustomersData = {};
 
     getDataService.getReportedIssuesChartData().then(function(response) {
         // this callback will be called asynchronously
@@ -36,7 +35,7 @@ angular.module('corporateDashBoardApp')
 
         chartObject["data"] = response.data;
      
-        $scope.salesData = chartObject;
+        $scope.reportedIssuesData = chartObject;
         
     });
 
@@ -57,7 +56,7 @@ angular.module('corporateDashBoardApp')
 
         chartObject["data"] = response.data;
      
-        $scope.dailyFootfallChart = chartObject;
+        $scope.openIssuesData = chartObject;
         
     });
 
@@ -78,7 +77,7 @@ angular.module('corporateDashBoardApp')
 
         chartObject["data"] = response.data;
      
-        $scope.dailyCSatChart = chartObject;
+        $scope.payingCustomersData = chartObject;
         
     });
 
