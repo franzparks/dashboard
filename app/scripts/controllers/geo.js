@@ -45,7 +45,7 @@ angular.module('corporateDashBoardApp')
             }
         };
 
-        chartObject["data"] = response.data;
+        chartObject.data = response.data;
      
         $scope.dataSource = chartObject;
         
