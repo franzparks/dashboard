@@ -1,5 +1,8 @@
 # A Corporate Dashboard Application
 
+### Dashboards receive near real time data updates due to Angular's two way data binding
+which automatically updates view when data changes in the controller (which gets its data from a service).
+
 ## Required Software
 
 * [Git](https://git-scm.com/)
