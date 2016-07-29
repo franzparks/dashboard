@@ -11,7 +11,7 @@ angular.module('corporateDashBoardApp')
   .service('getDataService',['$http', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
-	this.getSalesData = function(){
+	this.getSData = function(){
 
     	return $http({
     		method: "GET",
@@ -26,7 +26,7 @@ angular.module('corporateDashBoardApp')
     	});
 	};
 
-	this.getOpenIssuesChart = function(){
+	this.getOpenIssuesChartData = function(){
 		return $http({
 			method: "GET",
 			url : "../data/openissues.json"

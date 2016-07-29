@@ -20,7 +20,7 @@ angular.module('corporateDashBoardApp')
     $scope.dailyFootfallChart = {};
     $scope.dailyCSatChart = {};
 
-    getDataService.getSalesData().then(function(response) {
+    getDataService.getReportedIssuesChartData().then(function(response) {
         // this callback will be called asynchronously
         // when the response is available
         var chartObject = {
@@ -62,7 +62,7 @@ angular.module('corporateDashBoardApp')
         
     });
 
-    getDataService.getOpenIssuesChart().then(function(response) {
+    getDataService.getOpenIssuesChartData().then(function(response) {
        
         var chartObject = {
 
