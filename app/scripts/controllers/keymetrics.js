@@ -11,8 +11,8 @@ angular.module('corporateDashBoardApp')
   .controller('KeyMetricsCtrl',['$scope', 'getDataService', function ($scope, getDataService) {
 
 
-  	this.chartWidth = '550';
-    this.chartHeight = '300';
+  	this.chartWidth = '100%';
+    this.chartHeight = '400';
     this.dataType = 'json';
 
 	$scope.reportedIssuesData = {};

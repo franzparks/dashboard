@@ -1,15 +1,15 @@
 
 <div id='row'>
     
-    <div class="flex-container col-lg-12">
+    <div class="">
         <div><h2>Key Metrics</h2></div>
-        <div class="chartCont"> 
-            <div class='chart-left' id='reported-issues-chart-container'>
+        <div class="col-xs-12 col-md-12 col-lg-12"> 
+            <div class='' id='reported-issues-chart-container'>
                 <fusioncharts
                     type= "column2d"
                     renderAt= "sales-chart-container"
-                    width={{keyMetrics.chartWidth}}
-                    height={{keyMetrics.chartHeight}} 
+                    width="100%"
+                    height="500px" 
                     dataFormat = "{{keyMetrics.dataType}}"
                     dataSource="{{reportedIssuesData}}"
                 >
@@ -18,26 +18,26 @@
 
         </div>
 
-        <div class="chartCont">
+        <div class="">
 
-            <div class="chart-left" id='open-issues-chart-container'>
+            <div class="col-xs-12 col-md-12 col-lg-12" id='open-issues-chart-container'>
                 <fusioncharts
                     type= "area2d"
                     renderAt= "daily-footfall-chart-container"
-                    width={{keyMetrics.chartWidth}}
-                    height={{keyMetrics.chartHeight}} 
+                    width="100%"
+                    height="500px"
                     dataFormat = "{{keyMetrics.dataType}}"
                     dataSource="{{openIssuesData}}"    
                 >
                 </fusioncharts>
             </div>
 
-            <div class="chart-right" id='paying-customers-chart-container'>
+            <div class="col-xs-12 col-md-12 col-lg-12" id='paying-customers-chart-container'>
                 <fusioncharts
                     type= "line"
                     renderAt= "cs-chart-container"
-                    width={{keyMetrics.chartWidth}}
-                    height={{keyMetrics.chartHeight}} 
+                    width="100%"
+                    height="500px"
                     dataFormat = "{{keyMetrics.dataType}}"
                     dataSource="{{payingCustomersData}}"    
                 >
