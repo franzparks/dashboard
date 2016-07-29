@@ -39,7 +39,7 @@ angular.module('corporateDashBoardApp')
                 user.submission_time = arr[3];
                 user.status = arr[4];
                 user.close_time = arr[5];
-                user.issue_description = [6]; 
+                user.issue_description = arr[6]; 
 
                 return user;
             }
