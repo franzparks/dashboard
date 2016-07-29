@@ -62,7 +62,7 @@ angular.module('corporateDashBoardApp')
         
     });
 
-    getDataService.getDailyOpenIssuesChart().then(function(response) {
+    getDataService.getOpenIssuesChart().then(function(response) {
        
         var chartObject = {
 

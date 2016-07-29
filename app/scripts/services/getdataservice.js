@@ -26,7 +26,7 @@ angular.module('corporateDashBoardApp')
     	});
 	};
 
-	this.getDailyOpenIssuesChart = function(){
+	this.getOpenIssuesChart = function(){
 		return $http({
 			method: "GET",
 			url : "../data/openissues.json"
