@@ -1,11 +1,21 @@
 <div class="row table-container1">
     <div><h2>All Issues View</h2></div>
-	<table ng-table="tableParams" class="ui table compact inverted segment" show-filter="true">
+	<table ng-table="tableParams" class="ui unstackable table" show-filter="true">
 	
 	   <tr ng-repeat="issue in $data">
         <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
             {{issue.name}}
         </td>
+        <td title="'Priority'" filter="{ priority: 'number'}" sortable="'priority'">
+            {{issue.priority}}
+        </td>
+        <td title="'Severity'" filter="{ severity: 'number'}" sortable="'severity'">
+            {{issue.severity}}
+        </td>
+        <td title="'Status'" filter="{ status: 'text'}" sortable="'status'">
+            {{issue.status}}
+        </td>
+
         <td title="'Priority'" filter="{ priority: 'number'}" sortable="'priority'">
             {{issue.priority}}
         </td>
