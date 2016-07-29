@@ -2,18 +2,18 @@
     <div><h2>All Issues View</h2></div>
 	<table ng-table="tableParams" class="table table-striped" show-filter="true">
 	
-	   <tr ng-repeat="user in $data">
+	   <tr ng-repeat="issue in $data">
         <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
-            {{user.name}}
+            {{issue.name}}
         </td>
         <td title="'Priority'" filter="{ priority: 'number'}" sortable="'priority'">
-            {{user.priority}}
+            {{issue.priority}}
         </td>
         <td title="'Severity'" filter="{ severity: 'number'}" sortable="'severity'">
-            {{user.severity}}
+            {{issue.severity}}
         </td>
         <td title="'Status'" filter="{ status: 'text'}" sortable="'status'">
-            {{user.status}}
+            {{issue.status}}
         </td>
     </tr>
 	</table>
