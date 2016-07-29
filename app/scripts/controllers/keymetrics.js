@@ -33,7 +33,7 @@ angular.module('corporateDashBoardApp')
             }
         };
 
-        chartObject["data"] = response.data;
+        chartObject.data = response.data;
      
         $scope.reportedIssuesData = chartObject;
         
@@ -54,7 +54,7 @@ angular.module('corporateDashBoardApp')
             }
         };
 
-        chartObject["data"] = response.data;
+        chartObject.data = response.data;
      
         $scope.openIssuesData = chartObject;
         
@@ -75,7 +75,7 @@ angular.module('corporateDashBoardApp')
             }
         };
 
-        chartObject["data"] = response.data;
+        chartObject.data = response.data;
      
         $scope.payingCustomersData = chartObject;
         
