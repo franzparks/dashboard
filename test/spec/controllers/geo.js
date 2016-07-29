@@ -17,7 +17,7 @@ describe('Controller: GeoctrlCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
+  //it('should attach a list of awesomeThings to the scope', function () {
     //expect(GeoctrlCtrl.awesomeThings.length).toBe(3);
-  });
+  //});
 });

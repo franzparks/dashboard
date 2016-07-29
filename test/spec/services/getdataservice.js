@@ -11,9 +11,9 @@ describe('Service: getDataService', function () {
     getDataService = _getDataService_;
   }));
 
-  it('should do something', function () {
+  //it('should do something', function () {
     //expect(!!getDataService).toBe(true);
-    expect(true).toBe(true);
-  });
+    //expect(true).toBe(true);
+  //});
 
 });
