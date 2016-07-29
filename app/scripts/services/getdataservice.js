@@ -33,10 +33,10 @@ angular.module('corporateDashBoardApp')
 	    });
 	};
 
-	this.getDailyCSatChartData = function(){
+	this.getPayingCustomersChartData = function(){
 		return $http({
 			method: "GET",
-			url : "../data/dailysatchart.json"
+			url : "../data/payingcustomers.json"
 	    });
 	      
 	};

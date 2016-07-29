@@ -82,7 +82,7 @@ angular.module('corporateDashBoardApp')
         
     });
 
-    getDataService.getDailyCSatChartData().then(function(response) {
+    getDataService.getPayingCustomersChartData().then(function(response) {
        
         var chartObject = {
 
