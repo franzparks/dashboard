@@ -37,7 +37,7 @@ angular.module('corporateDashBoardApp')
                 user.customer_email = arr[1];
                 user.employee_name = arr[2];
                 user.submission_time = arr[3];
-                user.status = arr[4];
+                user.status = arr[4] ? 'open' : 'closed';
                 user.close_time = arr[5];
                 user.issue_description = arr[6]; 
 
