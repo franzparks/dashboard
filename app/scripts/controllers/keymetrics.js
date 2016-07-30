@@ -25,13 +25,13 @@ angular.module('corporateDashBoardApp')
             // this callback will be called asynchronously
             // when the response is available
             var chartObject = {
-                'chart':{
-                    'caption':'Number Of Reported Issues',
-                    'subcaption':'In The Last 3 weeks',
-                    'xaxisname':'Date',
-                    'yaxisname':'Reported Issues',
-                    'showvalues':'0',
-                    'theme':'fint'
+                chart:{
+                    caption:'Number Of Reported Issues',
+                    subcaption:'In The Last 3 weeks',
+                    xaxisname:'Date',
+                    yaxisname:'Reported Issues',
+                    showvalues:'0',
+                    theme:'fint'
                 }
             };
 
@@ -46,13 +46,13 @@ angular.module('corporateDashBoardApp')
            
             var chartObject = {
 
-                'chart': {
-                    'caption':'Number Of Open Issues',
-                    'subcaption':'Last 3 weeks',
-                    'xaxisname':'Date',
-                    'yaxisname':'No. Of Open Issues',
-                    'showvalues':'0',
-                    'theme':'fint'
+                chart: {
+                    caption:'Number Of Open Issues',
+                    subcaption:'Last 3 weeks',
+                    xaxisname:'Date',
+                    yaxisname:'No. Of Open Issues',
+                    showvalues:'0',
+                    theme:'fint'
                 }
             };
 
@@ -66,14 +66,14 @@ angular.module('corporateDashBoardApp')
            
             var chartObject = {
 
-                'chart': {
-                    'caption':'Number of Paying Customers',
-                    'subcaption':'Last 3 weeks',
-                    'xaxisname':'Date',
-                    'yaxisname':'Paying Customer Index',
-                    'yaxismaxvalue':'15000',
-                    'showvalues':'0',
-                    'theme':'fint'
+                chart: {
+                    caption:'Number of Paying Customers',
+                    subcaption:'Last 3 weeks',
+                    xaxisname:'Date',
+                    yaxisname:'Paying Customer Index',
+                    yaxismaxvalue:'15000',
+                    showvalues:'0',
+                    theme:'fint'
                 }
             };
 

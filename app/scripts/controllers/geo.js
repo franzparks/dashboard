@@ -13,26 +13,27 @@ angular.module('corporateDashBoardApp')
     $scope.dataSource = {};
 
     var refreshData = function(){
+
         getDataService.getGeoData().then(function(response) {
            
             var chartObject = {
 
-                'chart': {
-                    'caption': 'Number of Employees by State',
-                    'subcaption': 'This Year',
-                    'entityFillHoverColor': '#cccccc',
-                    'numberScaleValue': '1,1000,1000',
+                chart: {
+                    caption: 'Number of Employees by State',
+                    subcaption: 'This Year',
+                    entityFillHoverColor: '#cccccc',
+                    numberScaleValue: '1,1000,1000',
 
-                    'showLabels': '1',
-                    'theme': 'fint'
+                    showLabels: '1',
+                    theme: 'fint'
                 },
-                'colorrange': {
-                    'minvalue': '0',
-                    'startlabel': 'Low',
-                    'endlabel': 'High',
-                    'code': '#e44a00',
-                    'gradient': '1',
-                    'color': [
+                colorrange: {
+                    minvalue: '0',
+                    startlabel: 'Low',
+                    endlabel: 'High',
+                    code: '#e44a00',
+                    gradient: '1',
+                    color: [
                         {
                             'maxvalue': '56580',
                             'displayvalue': 'Average',
