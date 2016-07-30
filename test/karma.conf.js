@@ -28,6 +28,7 @@ module.exports = function(config) {
       'bower_components/ng-table/dist/ng-table.js',
       'bower_components/papaparse/papaparse.js',
       'bower_components/angular-papa-promise/dist/angular-papa-promise.js',
+      'bower_components/angular-fusioncharts/dist/angular-fusioncharts.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/angular-papaparse/dist/js/angular-PapaParse.js',
       // endbower
