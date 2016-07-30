@@ -5,15 +5,15 @@
         <div><h2>Key Metrics</h2></div>
         <div class="col-xs-12 col-md-12 col-lg-12"> 
             <div class='' id='reported-issues-chart-container'>
-                <div fusioncharts
+                <fusioncharts 
                     type= "column2d"
                     width="100%"
                     height="500px" 
-                    chart="{{reportedIssuesData}}"
-                    dataFormat = "{{keyMetrics.dataType}}"
+                    dataFormat = "json"
                     dataSource="{{reportedIssuesData}}"
                 >
-                </div>
+                <!--dataSource={{reportedIssuesData}}-->
+                </fusioncharts>
             </div>
 
         </div>
@@ -21,25 +21,28 @@
         <div class="">
 
             <div class="col-xs-12 col-md-12 col-lg-12" id='open-issues-chart-container'>
-                <div fusioncharts
+                <fusioncharts
                     type= "area2d"
                     width="100%"
                     height="500px"
-                    dataFormat = "{{keyMetrics.dataType}}"
+                    dataFormat = "json"
                     dataSource="{{openIssuesData}}"    
                 >
-                </div>
+                <!--dataSource={{openIssuesData}}-->
+                </fusioncharts>
             </div>
 
             <div class="col-xs-12 col-md-12 col-lg-12" id='paying-customers-chart-container'>
-                <div fusioncharts
+                <fusioncharts
                     type= "line"
                     width="100%"
                     height="500px"
-                    dataFormat = "{{keyMetrics.dataType}}"
-                    dataSource="{{payingCustomersData}}"    
+                    dataFormat = "json"
+                    dataSource="{{payingCustomersData}}" 
+                       
                 >
-                </div>
+                <!--dataSource={{payingCustomersData}} -->
+                </fusioncharts>
             </div>
         </div>
     </div>    
