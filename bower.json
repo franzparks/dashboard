@@ -8,7 +8,6 @@
     "fusioncharts": "^3.10.1",
     "ng-table": "^1.0.0",
     "papaparse": "^4.1.2",
-    "angular-papaparse": "1.0.0",
     "karma": "^0.4.6",
     "angular-papa-promise": "^0.0.3"
   },
