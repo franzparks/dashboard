@@ -25,7 +25,7 @@ angular.module('corporateDashBoardApp')
                     numberScaleValue: '1,1000,1000',
 
                     showLabels: '1',
-                    theme: 'fint'
+                    theme: 'ocean'
                 },
                 colorrange: {
                     minvalue: '0',
