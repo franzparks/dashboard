@@ -32,7 +32,7 @@ angular
 
   	.state('dataView', {
   		url : '/data-view',
-  		templateUrl: 'components/data_metrcis/dataMetrics.html',
+  		templateUrl: 'components/data_metrics/dataMetrics.html',
   		controller : 'DataViewCtrl as dataView'
   	});
 
