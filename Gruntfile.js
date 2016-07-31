@@ -300,7 +300,7 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/images',
+          cwd: '<%= yeoman.app %>/assets/img',
           src: '{,*/}*.{png,jpg,jpeg,gif}',
           dest: '<%= yeoman.dist %>/images'
         }]
@@ -379,7 +379,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
-            'images/{,*/}*.{webp}',
+            'assets/img/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
@@ -399,7 +399,30 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>/data',
           src: ['data/*.*']
-        }]
+        },
+        {
+          expand: true,
+          flatten: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>/components/data_metrics',
+          src: ['components/data_metrics/*.*']
+        },
+        {
+          expand: true,
+          flatten: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>/components/geo_metrics',
+          src: ['components/geo_metrics/*.*']
+        },
+        {
+          expand: true,
+          flatten: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>/components/key_metrics',
+          src: ['components/key_metrics/*.*']
+        }
+
+        ]
       },
       styles: {
         expand: true,
