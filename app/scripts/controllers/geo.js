@@ -23,7 +23,6 @@ angular.module('corporateDashBoardApp')
                     subcaption: 'This Year',
                     entityFillHoverColor: '#cccccc',
                     numberScaleValue: '1,1000,1000',
-
                     showLabels: '1',
                     theme: 'ocean'
                 },
