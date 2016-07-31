@@ -12,7 +12,7 @@ angular.module('corporateDashBoardApp')
     'use strict';
 
     //var self = this;
-	$scope.data = [];
+	$scope.issues = [];
 
     $scope.sortType     = 'customerName'; // set the default sort type
     $scope.sortReverse  = false;  // set the default sort order
@@ -33,30 +33,29 @@ angular.module('corporateDashBoardApp')
             //console.log("Finished:", results.data);
             //customer_name,customer_email,employee_name,submission_time,status,close_time,issue_description, date
             let newData = [];
-            newData = results.data.map(function(arr){
-                if(arr[0] !== 'customer_name' && arr[1] !== 'customer_email' && 
-                    arr[2] !== 'employee_name' && arr[3] !== 'submission_time' &&
-                     arr[4] !== 'status' && arr[5] !== 'close_time' && arr[6] !== 'issue_description' &&
-                     arr[7] !== 'date'){
+            newData = results.data.map(function(val){
+                if(val && val[0] !== 'customer_name' && val[1] !== 'customer_email' && 
+                    val[2] !== 'employee_name' && val[3] !== 'submission_time' &&
+                     val[4] !== 'status' && val[5] !== 'close_time' && val[6] !== 'issue_description' &&
+                     val[7] !== 'date'){
 
-                    var user = {};
-                    var date1 = arr[7];
-                    user.customerName = arr[0];
-                    user.customerEmail = arr[1];
-                    user.employeeName = arr[2];
-                    user.submissionTime = date1 +" "+ arr[3];
-                    user.status = arr[4] ? 'open' : 'closed';
-                    user.closeTime = date1 +" "+  arr[5];
-                    user.issueDescription = arr[6]; 
-
-                    return user;
+                    var issue = {};
+                    var date1 = val[7];
+                    issue.customerName = val[0];
+                    issue.customerEmail = val[1];
+                    issue.employeeName = val[2];
+                    issue.submissionTime = date1 +" "+ val[3];
+                    issue.status = val[4] ? 'open' : 'closed';
+                    issue.closeTime = date1 +" "+  val[5];
+                    issue.issueDescription = val[6]; 
+                    
+                    return issue;
                 }
             });
-
+            console.log($scope.issues);
             //update ui when data changes
-            if($scope.data !== newData){ 
-                $scope.data = newData;
-                $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
+            if($scope.issues !== newData){ 
+                $scope.issues = newData;
             }
         }
        });
