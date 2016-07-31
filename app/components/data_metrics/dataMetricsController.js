@@ -31,14 +31,16 @@ angular.module('corporateDashBoardApp')
             $scope.data = results.data.map(function(arr){
                 if(arr[0] !== 'customer_name' && arr[1] !== 'customer_email' && 
                     arr[2] !== 'employee_name' && arr[3] !== 'submission_time' &&
-                     arr[4] !== 'status' && arr[5] !== 'close_time' && arr[6] !== 'issue_description' ){
+                     arr[4] !== 'status' && arr[5] !== 'close_time' && arr[6] !== 'issue_description' &&
+                     arr[7] !== 'date'){
+
                     var user = {};
                     user.customerName = arr[0];
                     user.customerEmail = arr[1];
                     user.employeeName = arr[2];
-                    user.submissionTime = arr[3];
+                    user.submissionTime = arr[7] +" "+ arr[3];
                     user.status = arr[4] ? 'open' : 'closed';
-                    user.closeTime = arr[5];
+                    user.closeTime = arr[7] +" "+  arr[5];
                     user.issueDescription = arr[6]; 
 
                     return user;
