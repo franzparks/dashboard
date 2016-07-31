@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc service
  * @name corporateDashBoardApp.keyMetricsService
@@ -10,6 +8,8 @@
 angular.module('corporateDashBoardApp')
   .service('keyMetricsService',['$http', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
+    
+    'use strict';
 
 	this.getReportedIssuesChartData = function(){
 

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name corporateDashBoardApp.controller:DataviewctrlCtrl
@@ -11,6 +9,8 @@ angular.module('corporateDashBoardApp')
   .controller('DataViewCtrl',['$scope','$interval', 'NgTableParams','dataMetricsService','Papa',
      function ($scope,$interval, NgTableParams,dataMetricsService,Papa) {
 
+    'use strict';
+    
     //var self = this;
 	$scope.data = [];
 

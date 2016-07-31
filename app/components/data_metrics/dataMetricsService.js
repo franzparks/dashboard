@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc service
  * @name corporateDashBoardApp.dataMetricsService
@@ -11,6 +9,8 @@ angular.module('corporateDashBoardApp')
   .service('dataMetricsService',['$http', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
+    'use strict';
+    
 	this.getDataViewData = function(){
 
 		return $http({

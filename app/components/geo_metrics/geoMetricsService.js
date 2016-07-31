@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc service
  * @name corporateDashBoardApp.geoMetricsService
@@ -10,6 +8,8 @@
 angular.module('corporateDashBoardApp')
   .service('geoMetricsService',['$http', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
+
+    'use strict';
 
 	this.getGeoData = function(){
 

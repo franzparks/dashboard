@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name corporateDashBoardApp.controller:GeoctrlCtrl
@@ -9,7 +7,9 @@
  */
 angular.module('corporateDashBoardApp')
   .controller('GeoCtrl',['$scope','$interval','geoMetricsService', function ($scope,$interval,geoMetricsService) {
-   
+    
+   'use strict';
+
     $scope.dataSource = {};
 
     var refreshData = function(){

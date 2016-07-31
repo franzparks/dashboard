@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name corporateDashBoardApp.controller:KeymetricsctrlCtrl
@@ -10,6 +8,8 @@
 angular.module('corporateDashBoardApp')
   .controller('KeyMetricsCtrl',['$scope','$interval','keyMetricsService', function ($scope,$interval,keyMetricsService) {
 
+    'use strict';
+    
     $scope.reportedIssuesData = {};
     $scope.openIssuesData = {};
     $scope.payingCustomersData = {};
