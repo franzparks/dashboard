@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc service
- * @name corporateDashBoardApp.getDataService
+ * @name corporateDashBoardApp.keyMetricsService
  * @description
- * # getDataService
+ * # keyMetricsService
  * Service in the corporateDashBoardApp.
  */
 angular.module('corporateDashBoardApp')
-  .service('getDataService',['$http', function ($http) {
+  .service('keyMetricsService',['$http', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
 	this.getReportedIssuesChartData = function(){
