@@ -47,8 +47,11 @@ angular.module('corporateDashBoardApp')
             };
 
             chartObject.data = response.data;
-         
-            $scope.dataSource = chartObject;
+
+            //update ui only when data changes
+            if($scope.dataSource.data !== chartObject.data){
+                $scope.dataSource = chartObject;
+            }   
             
         });
     };
