@@ -8,13 +8,13 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('DataViewCtrl',['$scope','$interval', 'NgTableParams','getDataService','Papa',
-     function ($scope,$interval, NgTableParams,getDataService,Papa) {
+  .controller('DataViewCtrl',['$scope','$interval', 'NgTableParams','dataMetricsService','Papa',
+     function ($scope,$interval, NgTableParams,dataMetricsService,Papa) {
 
     //var self = this;
 	$scope.data = [];
 
-    //getDataService.getDataViewData().then(function(response) {
+    //dataMetricsService.getDataViewData().then(function(response) {
         // this callback will be called asynchronously
         // when the response is available
     //    $scope.data = response.data;
@@ -50,7 +50,6 @@ angular.module('corporateDashBoardApp')
     };
     
     
-
     var promise = $interval(refreshData, 1000); 
 
     // Cancel interval on page changes

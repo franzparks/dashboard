@@ -41,20 +41,4 @@ angular.module('corporateDashBoardApp')
 	      
 	};
 
-	this.getGeoData = function(){
-
-		return $http({
-			method: 'GET',
-			url : '../data/geochart.json'
-	    });
-	};
-
-	this.getDataViewData = function(){
-
-		return $http({
-			method: 'GET',
-			url : '../data/dataview.json'
-	    });
-	};
-
 }]);
