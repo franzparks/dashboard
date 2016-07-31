@@ -1,6 +1,6 @@
 <div class="row">
     <div><h2>All Issues View</h2></div>
-    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+    <div class="">
    
     <form>
         <div class="form-group">
@@ -12,7 +12,7 @@
   </form>
       
        <div class="table-responsive">
-          <table class="table table-bordered table-stripped">  
+          <table class="ui compact table">  
             <thead>
               <tr>
                 <td>
@@ -23,7 +23,11 @@
                   </a>
                 </td>
                 <td>
-                  Customer Email 
+                    <a href="#" ng-click="sortType = ''; sortReverse = !sortReverse">
+                        Customer Email 
+                        <span ng-show="sortType == '' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == '' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
                 </td>
                 <td>
                   <a href="#" ng-click="sortType = 'employeeName'; sortReverse = !sortReverse">
@@ -56,7 +60,12 @@
                 </td>
                 
                 <td>
-                    Issue Description
+                    <a href="#" ng-click="sortType = ''; sortReverse = !sortReverse">
+                        Issue Description
+                        <span ng-show="sortType == '' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == '' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                    
                 </td>
               </tr>
             </thead>
