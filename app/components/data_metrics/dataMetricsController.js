@@ -14,6 +14,10 @@ angular.module('corporateDashBoardApp')
     //var self = this;
 	$scope.data = [];
 
+    $scope.sortType     = 'customerName'; // set the default sort type
+    $scope.sortReverse  = false;  // set the default sort order
+    $scope.searchTable   = '';     // set the default search/filter term
+
     //dataMetricsService.getDataViewData().then(function(response) {
         // this callback will be called asynchronously
         // when the response is available
