@@ -35,12 +35,13 @@ angular.module('corporateDashBoardApp')
                      arr[7] !== 'date'){
 
                     var user = {};
+                    var date = arr[7];
                     user.customerName = arr[0];
                     user.customerEmail = arr[1];
                     user.employeeName = arr[2];
-                    user.submissionTime = arr[7] +" "+ arr[3];
+                    user.submissionTime = date +" "+ arr[3];
                     user.status = arr[4] ? 'open' : 'closed';
-                    user.closeTime = arr[7] +" "+  arr[5];
+                    user.closeTime = date +" "+  arr[5];
                     user.issueDescription = arr[6]; 
 
                     return user;
