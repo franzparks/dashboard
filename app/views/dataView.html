@@ -1,6 +1,6 @@
 <div class="row">
     <div><h2>All Issues View</h2></div>
-	<table ng-table="tableParams" class="ui compact sortable table" show-filter="true">
+	<table ng-table="tableParams" class="ui compact  table" show-filter="true">
     
 	   <tr ng-repeat="issue in $data">
         <td title="'Customer Name'" filter="{ customer_name: 'text'}" sortable="'customer_name'">
@@ -13,13 +13,13 @@
             {{issue.employee_name}}
         </td>
         
-        <td title="'Submmission Time'" filter="{ submission_time: 'text'}" sortable="'submission_time'">
+        <td title="'Submmission Time'" filter="{ submission_time: 'text'}" sortable="'submission_time'" >
             {{issue.submission_time}}
         </td>
         <td title="'Issue Status'" filter="{ status: 'text'}" sortable="'text'">
             {{issue.status}}
         </td>
-        <td title="'Close Time'" filter="{ close_time: 'text'}" sortable="'close_time'">
+        <td title="'Close Time'" filter="{ close_time: 'text'}" sortable="'close_time'"> 
             {{issue.close_time}}
         </td>
 
