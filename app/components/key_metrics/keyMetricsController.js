@@ -15,8 +15,8 @@ angular.module('corporateDashBoardApp')
     $scope.payingCustomersData = {};
 
     $scope.chartoptions = {
-        "containerBackgroundColor": "#FF0000",
-        "containerBackgroundOpacity": "0"
+        'containerBackgroundColor': '#FF0000',
+        'containerBackgroundOpacity': '0'
     };
 
     var refreshData = function(){

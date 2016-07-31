@@ -3,28 +3,28 @@
 	<table ng-table="tableParams" class="ui compact  table" show-filter="true">
     
 	   <tr ng-repeat="issue in $data">
-        <td title="'Customer Name'" filter="{ customer_name: 'text'}" sortable="'customer_name'">
-            {{issue.customer_name}}
+        <td title="'Customer Name'" filter="{ customerName: 'text'}" sortable="'customerName'">
+            {{issue.customerName}}
         </td>
-        <td title="'Customer Email'" filter="{ customer_email: 'text'}" >
-            {{issue.customer_email}}
+        <td title="'Customer Email'" filter="{ customerEmail: 'text'}" >
+            {{issue.customerEmail}}
         </td>
-        <td title="'Employee Name'" filter="{ employee_name: 'text'}" sortable="'employee_name'">
-            {{issue.employee_name}}
+        <td title="'Employee Name'" filter="{ employeeName: 'text'}" sortable="'employeeName'">
+            {{issue.employeeName}}
         </td>
         
-        <td title="'Submmission Time'" filter="{ submission_time: 'text'}" sortable="'submission_time'" >
-            {{issue.submission_time}}
+        <td title="'Submmission Time'" filter="{ submissionTime: 'text'}" sortable="'submissionTime'" >
+            {{issue.submissionTime}}
         </td>
         <td title="'Issue Status'" filter="{ status: 'text'}" sortable="'text'">
             {{issue.status}}
         </td>
-        <td title="'Close Time'" filter="{ close_time: 'text'}" sortable="'close_time'"> 
-            {{issue.close_time}}
+        <td title="'Close Time'" filter="{ closeTime: 'text'}" sortable="'closeTime'"> 
+            {{issue.closeTime}}
         </td>
 
-        <td title="'Issue Description'" filter="{ issue_description: 'text'}" >
-            {{issue.issue_description}}
+        <td title="'Issue Description'" filter="{ issueDescription: 'text'}" >
+            {{issue.issueDescription}}
         </td>
         
     </tr>

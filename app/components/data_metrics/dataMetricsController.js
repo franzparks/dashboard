@@ -29,17 +29,17 @@ angular.module('corporateDashBoardApp')
             //console.log("Finished:", results.data);
             //customer_name,customer_email,employee_name,submission_time,status,close_time,issue_description
             $scope.data = results.data.map(function(arr){
-                if(arr[0] !== 'customer_name' && arr[1] !== 'customer_email'
-                    && arr[2] !== 'employee_name' && arr[3] !== 'submission_time' 
-                    && arr[4] !== 'status' && arr[5] !== 'close_time' && arr[6] !== 'issue_description' ){
+                if(arr[0] !== 'customer_name' && arr[1] !== 'customer_email' && 
+                    arr[2] !== 'employee_name' && arr[3] !== 'submission_time' &&
+                     arr[4] !== 'status' && arr[5] !== 'close_time' && arr[6] !== 'issue_description' ){
                     var user = {};
-                    user.customer_name = arr[0];
-                    user.customer_email = arr[1];
-                    user.employee_name = arr[2];
-                    user.submission_time = arr[3];
+                    user.customerName = arr[0];
+                    user.customerEmail = arr[1];
+                    user.employeeName = arr[2];
+                    user.submissionTime = arr[3];
                     user.status = arr[4] ? 'open' : 'closed';
-                    user.close_time = arr[5];
-                    user.issue_description = arr[6]; 
+                    user.closeTime = arr[5];
+                    user.issueDescription = arr[6]; 
 
                     return user;
                 }
