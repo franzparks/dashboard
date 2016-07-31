@@ -38,8 +38,8 @@ angular.module('corporateDashBoardApp')
             chartObject.data = response.data;
 
             //update ui only when data changes
-            if($scope.dataSource.data !== chartObject.data){
-                $scope.dataSource = chartObject;
+            if($scope.reportedIssuesData !== chartObject){
+                $scope.reportedIssuesData = chartObject;
             }
             
         });
