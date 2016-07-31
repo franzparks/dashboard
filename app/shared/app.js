@@ -19,20 +19,20 @@ angular
 
   	.state('keyMetrics', {
   		url : '/',
-  		templateUrl: 'views/keyMetrics.html',
+  		templateUrl: 'components/key_metrics/keyMetricsView.html',
   		controller : 'KeyMetricsCtrl as keyMetrics'
   	})
 
   	.state('geo', {
   		url : '/geo',
-  		templateUrl: 'views/geo.html',
+  		templateUrl: 'components/geo_metrics/geoMetricsView.html',
   		controller : 'GeoCtrl as geo'
 
   	})
 
   	.state('dataView', {
   		url : '/data-view',
-  		templateUrl: 'views/dataView.html',
+  		templateUrl: 'components/data_metrics/dataMetricsView.html',
   		controller : 'DataViewCtrl as dataView'
   	});
 

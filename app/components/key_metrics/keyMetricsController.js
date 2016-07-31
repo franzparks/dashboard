@@ -8,20 +8,20 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('KeyMetricsCtrl',['$scope','$interval','getDataService', function ($scope,$interval,getDataService) {
+  .controller('KeyMetricsCtrl',['$scope','$interval','keyMetricsService', function ($scope,$interval,keyMetricsService) {
 
     $scope.reportedIssuesData = {};
     $scope.openIssuesData = {};
     $scope.payingCustomersData = {};
 
     $scope.chartoptions = {
-        "containerBackgroundColor": "#FF0000",
-        "containerBackgroundOpacity": "0"
+        'containerBackgroundColor': '#FF0000',
+        'containerBackgroundOpacity': '0'
     };
 
     var refreshData = function(){
 
-        getDataService.getReportedIssuesChartData().then(function(response) {
+        keyMetricsService.getReportedIssuesChartData().then(function(response) {
             // this callback will be called asynchronously
             // when the response is available
             var chartObject = {
@@ -42,7 +42,7 @@ angular.module('corporateDashBoardApp')
         });
 
 
-        getDataService.getOpenIssuesChartData().then(function(response) {
+        keyMetricsService.getOpenIssuesChartData().then(function(response) {
            
             var chartObject = {
 
@@ -62,7 +62,7 @@ angular.module('corporateDashBoardApp')
             
         });
 
-        getDataService.getPayingCustomersChartData().then(function(response) {
+        keyMetricsService.getPayingCustomersChartData().then(function(response) {
            
             var chartObject = {
 

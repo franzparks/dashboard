@@ -14,7 +14,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
       <!-- endbuild -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/components/table.min.css" />
 
@@ -105,13 +105,18 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/geo.js"></script>
-        <script src="scripts/controllers/keymetrics.js"></script>
-        <script src="scripts/controllers/dataview.js"></script>
+        <script src="shared/app.js"></script>
 
-        <script src="scripts/services/getdataservice.js"></script>
-        <!--<script src="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.js"></script>-->
+        <script src="components/geo_metrics/geoMetricsController.js"></script>
+        <script src="components/geo_metrics/geoMetricsService.js"></script>
+
+        <script src="components/key_metrics/keyMetricsController.js"></script>
+        <script src="components/key_metrics/keyMetricsService.js"></script>
+
+        <script src="components/data_metrics/dataMetricsController.js"></script>
+        <script src="components/data_metrics/dataMetricsService.js"></script>
+
+        <script src="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.js"></script>
         
         <!-- endbuild -->
 </body>

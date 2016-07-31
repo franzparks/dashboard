@@ -8,13 +8,13 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('GeoCtrl',['$scope','$interval','getDataService', function ($scope,$interval,getDataService) {
+  .controller('GeoCtrl',['$scope','$interval','geoMetricsService', function ($scope,$interval,geoMetricsService) {
    
     $scope.dataSource = {};
 
     var refreshData = function(){
 
-        getDataService.getGeoData().then(function(response) {
+        geoMetricsService.getGeoData().then(function(response) {
            
             var chartObject = {
 

@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc service
- * @name corporateDashBoardApp.getDataService
+ * @name corporateDashBoardApp.keyMetricsService
  * @description
- * # getDataService
+ * # keyMetricsService
  * Service in the corporateDashBoardApp.
  */
 angular.module('corporateDashBoardApp')
-  .service('getDataService',['$http', function ($http) {
+  .service('keyMetricsService',['$http', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
 	this.getReportedIssuesChartData = function(){
@@ -39,22 +39,6 @@ angular.module('corporateDashBoardApp')
 			url : '../data/payingcustomers.json'
 	    });
 	      
-	};
-
-	this.getGeoData = function(){
-
-		return $http({
-			method: 'GET',
-			url : '../data/geochart.json'
-	    });
-	};
-
-	this.getDataViewData = function(){
-
-		return $http({
-			method: 'GET',
-			url : '../data/dataview.json'
-	    });
 	};
 
 }]);

@@ -1,0 +1,32 @@
+<div class="row">
+    <div><h2>All Issues View</h2></div>
+	<table ng-table="tableParams" class="ui compact  table" show-filter="true">
+    
+	   <tr ng-repeat="issue in $data">
+        <td title="'Customer Name'" filter="{ customerName: 'text'}" sortable="'customerName'">
+            {{issue.customerName}}
+        </td>
+        <td title="'Customer Email'" filter="{ customerEmail: 'text'}" >
+            {{issue.customerEmail}}
+        </td>
+        <td title="'Employee Name'" filter="{ employeeName: 'text'}" sortable="'employeeName'">
+            {{issue.employeeName}}
+        </td>
+        
+        <td title="'Submmission Time'" filter="{ submissionTime: 'text'}" sortable="'submissionTime'" >
+            {{issue.submissionTime}}
+        </td>
+        <td title="'Issue Status'" filter="{ status: 'text'}" sortable="'text'">
+            {{issue.status}}
+        </td>
+        <td title="'Close Time'" filter="{ closeTime: 'text'}" sortable="'closeTime'"> 
+            {{issue.closeTime}}
+        </td>
+
+        <td title="'Issue Description'" filter="{ issueDescription: 'text'}" >
+            {{issue.issueDescription}}
+        </td>
+        
+    </tr>
+	</table>
+</div>
