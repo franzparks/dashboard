@@ -52,7 +52,7 @@ angular.module('corporateDashBoardApp')
                     return issue;
                 }
             });
-            console.log($scope.issues);
+            
             //update ui when data changes
             if($scope.issues !== latestData){ 
                 $scope.issues = latestData;
