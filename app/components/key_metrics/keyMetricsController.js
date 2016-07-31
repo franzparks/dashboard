@@ -60,8 +60,10 @@ angular.module('corporateDashBoardApp')
             };
 
             chartObject.data = response.data;
-         
-            $scope.openIssuesData = chartObject;
+
+            if($scope.openIssuesData !== chartObject){
+                $scope.openIssuesData = chartObject;
+            }
             
         });
 
