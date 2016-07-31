@@ -10,7 +10,7 @@ angular.module('corporateDashBoardApp')
      function ($scope,$interval, NgTableParams,dataMetricsService,Papa) {
 
     'use strict';
-    
+
     //var self = this;
 	$scope.data = [];
 
@@ -27,7 +27,7 @@ angular.module('corporateDashBoardApp')
             download: true,
             complete: function(results) {
             //console.log("Finished:", results.data);
-            //customer_name,customer_email,employee_name,submission_time,status,close_time,issue_description
+            //customer_name,customer_email,employee_name,submission_time,status,close_time,issue_description, date
             $scope.data = results.data.map(function(arr){
                 if(arr[0] !== 'customer_name' && arr[1] !== 'customer_email' && 
                     arr[2] !== 'employee_name' && arr[3] !== 'submission_time' &&
