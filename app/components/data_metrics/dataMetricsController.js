@@ -32,8 +32,8 @@ angular.module('corporateDashBoardApp')
             complete: function(results) {
             //console.log("Finished:", results.data);
             //customer_name,customer_email,employee_name,submission_time,status,close_time,issue_description, date
-            let newData = [];
-            newData = results.data.map(function(val){
+            let latestData = [];
+            latestData = results.data.map(function(val){
                 if(val[0] !== 'customer_name' && val[1] !== 'customer_email' && 
                     val[2] !== 'employee_name' && val[3] !== 'submission_time' &&
                      val[4] !== 'status' && val[5] !== 'close_time' && val[6] !== 'issue_description' &&
@@ -54,8 +54,8 @@ angular.module('corporateDashBoardApp')
             });
             console.log($scope.issues);
             //update ui when data changes
-            if($scope.issues !== newData){ 
-                $scope.issues = newData;
+            if($scope.issues !== latestData){ 
+                $scope.issues = latestData;
             }
         }
        });
