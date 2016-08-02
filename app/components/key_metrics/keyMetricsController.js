@@ -25,14 +25,14 @@ angular.module('corporateDashBoardApp')
             // this callback will be called asynchronously
             // when the response is available
             var chartObject = {
-                chart:{
+                /*chart:{
                     caption:'Number Of Reported Issues',
                     subcaption:'In The Last 3 weeks',
                     xaxisname:'Date',
                     yaxisname:'Reported Issues',
                     showvalues:'0',
                     theme:'ocean'
-                }
+                }*/
             };
 
             chartObject.data = response.data;
