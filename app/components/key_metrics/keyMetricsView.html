@@ -4,8 +4,15 @@
     <div><h2>Key Metrics</h2></div>
 
     <div id='reported-issues-chart-container' >
-        <fusioncharts 
-            type= "column2d"
+        <fusioncharts
+
+            caption="Number Of Reported Issues",
+            subcaption="In The Last 3 weeks",
+            xaxisname="Date",
+            yaxisname="Reported Issues",
+            showvalues="0",
+            theme="ocean", 
+            type="column2d"
             width="100%"
             height="500" 
             config="{{chartoptions}}"
