@@ -16,37 +16,9 @@ angular.module('corporateDashBoardApp')
 
         geoMetricsService.getGeoData().then(function(response) {
            
-            var chartObject = {
+            var chartObject = {};
 
-                chart: {
-                    caption: 'Number of Employees by State',
-                    subcaption: 'This Year',
-                    entityFillHoverColor: '#cccccc',
-                    numberScaleValue: '1,1000,1000',
-                    showLabels: '1',
-                    theme: 'ocean'
-                },
-                colorrange: {
-                    minvalue: '0',
-                    startlabel: 'Low',
-                    endlabel: 'High',
-                    code: '#e44a00',
-                    gradient: '1',
-                    color: [
-                        {
-                            'maxvalue': '56580',
-                            'displayvalue': 'Average',
-                            'code': '#f8bd19'
-                        },
-                        {
-                            'maxvalue': '100000',
-                            'code': '#6baa01'
-                        }
-                    ]
-                }
-            };
-
-            chartObject.data = response.data;
+            chartObject = response.data;
 
             //update ui only when data changes
             if($scope.dataSource.data !== chartObject.data){
