@@ -2,9 +2,9 @@
     "chart":{
         "caption":"Number Of Reported Issues",
         "subcaption":"In The Last 3 weeks",
-        "xaxisname:"Date",
-        "yaxisname:"Reported Issues",
-        "showvalues:"0",
+        "xaxisname":"Date",
+        "yaxisname":"Reported Issues",
+        "showvalues":"0",
         "theme":"ocean"
     },
 
