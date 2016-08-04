@@ -14,26 +14,12 @@ angular.module('corporateDashBoardApp')
     $scope.openIssuesData = {};
     $scope.payingCustomersData = {};
 
-    $scope.chartoptions = {
-        'containerBackgroundColor': '#FF0000',
-        'containerBackgroundOpacity': '0'
-    };
-
     var refreshData = function(){
 
         keyMetricsService.getReportedIssuesChartData().then(function(response) {
             // this callback will be called asynchronously
             // when the response is available
-            var chartObject = {
-                /*chart:{
-                    caption:'Number Of Reported Issues',
-                    subcaption:'In The Last 3 weeks',
-                    xaxisname:'Date',
-                    yaxisname:'Reported Issues',
-                    showvalues:'0',
-                    theme:'ocean'
-                }*/
-            };
+            var chartObject = {};
 
             chartObject = response.data;
 
