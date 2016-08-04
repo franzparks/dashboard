@@ -60,20 +60,9 @@ angular.module('corporateDashBoardApp')
 
         keyMetricsService.getPayingCustomersChartData().then(function(response) {
            
-            var chartObject = {
+            var chartObject = {};
 
-                chart: {
-                    caption:'Number of Paying Customers',
-                    subcaption:'Last 3 weeks',
-                    xaxisname:'Date',
-                    yaxisname:'Paying Customer Index',
-                    yaxismaxvalue:'15000',
-                    showvalues:'0',
-                    theme:'ocean'
-                }
-            };
-
-            chartObject.data = response.data;
+            chartObject = response.data;
          
             //update ui only when data changes
             if($scope.payingCustomersData !== chartObject){
