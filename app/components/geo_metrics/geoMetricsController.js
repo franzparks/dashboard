@@ -60,7 +60,7 @@ angular.module('corporateDashBoardApp')
 
     // Cancel interval on page changes
     $scope.$on('$destroy', function(){
-        if (angular.isDefined(promise)) {
+        if (promise) {
             $interval.cancel(promise);
             promise = undefined;
         }
