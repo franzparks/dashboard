@@ -35,7 +35,7 @@ angular.module('corporateDashBoardApp')
                 }*/
             };
 
-            chartObject.data = response.data;
+            chartObject = response.data;
 
             //update ui only when data changes
             if($scope.reportedIssuesData !== chartObject){
@@ -47,19 +47,9 @@ angular.module('corporateDashBoardApp')
 
         keyMetricsService.getOpenIssuesChartData().then(function(response) {
            
-            var chartObject = {
+            var chartObject = {};
 
-                chart: {
-                    caption:'Number Of Open Issues',
-                    subcaption:'Last 3 weeks',
-                    xaxisname:'Date',
-                    yaxisname:'No. Of Open Issues',
-                    showvalues:'0',
-                    theme:'ocean'
-                }
-            };
-
-            chartObject.data = response.data;
+             chartObject = response.data;
 
             //update ui only when data changes
             if($scope.openIssuesData !== chartObject){
