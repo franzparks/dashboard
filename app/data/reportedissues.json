@@ -1,4 +1,14 @@
-[
+{
+    chart:{
+                    caption:'Number Of Reported Issues',
+                    subcaption:'In The Last 3 weeks',
+                    xaxisname:'Date',
+                    yaxisname:'Reported Issues',
+                    showvalues:'0',
+                    theme:'ocean'
+                },
+
+    data : [
     {
         "label":"14 May",
         "value":"2671"
@@ -83,4 +93,6 @@
         "label":"Yesterday",
         "value":"2644"
     }
-]      
+]  
+
+}    
