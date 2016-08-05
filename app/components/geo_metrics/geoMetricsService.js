@@ -6,17 +6,26 @@
  * Service in the corporateDashBoardApp.
  */
 angular.module('corporateDashBoardApp')
-  .service('geoMetricsService',['$http', function ($http) {
+  .service('geoMetricsService',['$http', function ($http, $timeout) {
     // AngularJS will instantiate a singleton by calling "new" on this function
-
     'use strict';
+    var geoData = {};
 
-	this.getGeoData = function(){
+	var pollGeoData = function(){
 
-		return $http({
+		$http({
 			method: 'GET',
 			url : '../data/geochart.json'
+	    }).then(function(res){
+	    	geoData = res.data;
+	    	$timeout(pollGeoData, 1000);
 	    });
+	};
+
+	pollGeoData();
+
+	return {
+		data : geoData
 	};
 
 }]);
