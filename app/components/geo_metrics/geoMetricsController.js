@@ -6,13 +6,13 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('GeoCtrl',['$scope','$interval','geoMetricsService', function ($scope,$interval,geoMetricsService) {
+  .controller('GeoCtrl',['$scope','$interval','geoMetricsService', function ($scope,$timeout,geoMetricsService) {
     
    'use strict';
 
-    $scope.dataSource = {};
+    $scope.dataSource = geoMetricsService.data;
 
-    var refreshData = function(){
+    /*var refreshData = function(){
 
         geoMetricsService.getGeoData().then(function(response) {
            
@@ -36,7 +36,7 @@ angular.module('corporateDashBoardApp')
             $interval.cancel(promise);
             promise = undefined;
         }
-    });   
+    });  */ 
 
    
   }]);
