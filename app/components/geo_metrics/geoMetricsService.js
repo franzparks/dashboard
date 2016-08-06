@@ -17,7 +17,7 @@ angular.module('corporateDashBoardApp')
 		$http.get('../data/geochart.json').then(function(res){
 	    	if (typeof res.data === 'object') {
                 geoData.data = res.data;
-                console.log(res.data);
+                console.log('geo Metrics Data : '+res.data);
             } else {
                 error(res.data);
             }
