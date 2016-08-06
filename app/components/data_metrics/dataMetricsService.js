@@ -54,6 +54,6 @@ angular.module('corporateDashBoardApp')
     	dataView: dataView,
     	getIssuesData: getIssuesData
 
-    }
+    };
 
 }]);

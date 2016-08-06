@@ -22,9 +22,7 @@ angular.module('corporateDashBoardApp')
                 	geoData.data = res.data;
                 }
                 //console.log('geo Metrics Data : '+res.data);
-            } else {
-                error(res.data);
-            }
+           }
            
 	    });
 	};

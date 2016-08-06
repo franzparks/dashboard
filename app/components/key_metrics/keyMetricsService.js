@@ -67,6 +67,6 @@ angular.module('corporateDashBoardApp')
 		openIssues : openIssues,
 		payingCustomers: payingCustomers,
 		refreshData: refreshData
-	}
+	};
 
 }]);
