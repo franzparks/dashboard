@@ -21,22 +21,13 @@ angular.module('corporateDashBoardApp')
             } else {
                 error(res.data);
             }
-            //$timeout(getGeoData, 1000);
-
+           
 	    });
 	};
     
-	//getGeoData();
-	//var promise; //= $interval(getGeoData, 1000);
-    
-     //var startPolling = function(){
-     	//promise = $interval(getGeoData, 1000);
-     	//console.log('started polling');
-     //};
 
 	return {
 		geoData : geoData,
-		//promise : promise,
 		getGeoData : getGeoData
 	};
 	
