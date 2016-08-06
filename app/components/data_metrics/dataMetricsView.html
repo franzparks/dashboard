@@ -64,7 +64,7 @@
             </thead>
             
             <tbody>
-              <tr ng-repeat="issue in issues | orderBy:sortType:sortReverse | filter:searchTable">
+              <tr ng-repeat="issue in issues.data | orderBy:sortType:sortReverse | filter:searchTable">
                 <td>{{issue.customerName}}</td>
                 <td> {{issue.customerEmail}}</td>
                 <td>{{issue.employeeName}}</td>

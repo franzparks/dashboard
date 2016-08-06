@@ -11,34 +11,62 @@ angular.module('corporateDashBoardApp')
     
     'use strict';
 
-	this.getReportedIssuesChartData = function(){
+    var reportedIssues = { data : {} };
+    var openIssues = { data : {} };
+    var payingCustomers = { data : {} };
 
-    	return $http({
+	var getReportedIssuesChartData = function(){
+
+    	$http({
     		method: 'GET',
     		url : '../data/reportedissues.json'
-    	});
+    	}).then(function(response) {
+           //update only when data changes
+           if(reportedIssues.data !== response.data){
+           		reportedIssues.data = response.data;
+           }
+            
+            
+        });
+
 	};
 
-	this.getTransChartData = function(){
-		return $http({
-    		method: 'GET',
-    		url : '../data/transchartdata.json'
-    	});
-	};
 
-	this.getOpenIssuesChartData = function(){
-		return $http({
+	var getOpenIssuesChartData = function(){
+		$http({
 			method: 'GET',
 			url : '../data/openissues.json'
-	    });
+	    }).then(function(response) {
+
+            openIssues.data = response.data;
+            //console.log('keyMetrics Data :'+response.data);
+            
+        });
 	};
 
-	this.getPayingCustomersChartData = function(){
-		return $http({
+	var getPayingCustomersChartData = function(){
+		$http({
 			method: 'GET',
 			url : '../data/payingcustomers.json'
-	    });
+	    }).then(function(response) {
+
+            payingCustomers.data = response.data;
+            
+        });
 	      
+	};
+
+	var refreshData = function(){
+		getReportedIssuesChartData();
+		getOpenIssuesChartData();
+		getPayingCustomersChartData();
+	};
+
+	return {
+		reportedIssues: reportedIssues,
+		openIssues : openIssues,
+		payingCustomers: payingCustomers,
+		refreshData: refreshData
 	};
 
 }]);

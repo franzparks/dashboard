@@ -10,33 +10,28 @@ angular.module('corporateDashBoardApp')
     
    'use strict';
 
-    $scope.dataSource = {};
-
-    var refreshData = function(){
-
-        geoMetricsService.getGeoData().then(function(response) {
-           
-            var chartObject = {};
-
-            chartObject = response.data;
-
-            //update ui only when data changes
-            if($scope.dataSource.data !== chartObject.data){
-                $scope.dataSource = chartObject;
-            }   
-            
-        });
-    };
+    var promise;
     
-    var promise = $interval(refreshData, 1000); 
+    $scope.dataSource = geoMetricsService.geoData;
+    //console.log("from service data : "+ geoMetricsService.geoData);  
+
+    $scope.start = function(){
+        $scope.stop();
+        promise = $interval(geoMetricsService.getGeoData, 1000);
+    };
+
+    $scope.stop = function(){
+        $interval.cancel(promise);
+        promise = undefined;
+    };
+
+    //start polling when controller scope is created
+    $scope.start();
 
     // Cancel interval on page changes
     $scope.$on('$destroy', function(){
-        if (promise) {
-            $interval.cancel(promise);
-            promise = undefined;
-        }
-    });   
+       $scope.stop();
+    }); 
 
    
   }]);
