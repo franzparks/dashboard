@@ -6,11 +6,22 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('GeoCtrl',['$scope','$interval','geoMetricsService', function ($scope,$timeout,geoMetricsService) {
+  .controller('GeoCtrl',['$scope','$interval','geoMetricsService', function ($scope,$interval,geoMetricsService) {
     
    'use strict';
 
-    $scope.dataSource = geoMetricsService.data;
+   //console.log("from service : "+ Object.keys(geoMetricsService.data));
+   //console.log("from service data : "+ geoMetricsService.data.data);
+
+    /*geoMetricsService.getGeoData(function(response) {
+        $scope.dataSource = response.data;
+        console.log("from service data : "+ response.data);
+        }, function(error) {
+        console.log('Error:', error);
+    });*/
+
+    $scope.dataSource = geoMetricsService.geoData;
+    console.log("from service data : "+ Object.keys(geoMetricsService.geoData));
 
     /*var refreshData = function(){
 

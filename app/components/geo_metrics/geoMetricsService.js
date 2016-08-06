@@ -9,23 +9,29 @@ angular.module('corporateDashBoardApp')
   .service('geoMetricsService',['$http','$timeout', function ($http, $timeout) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     'use strict';
-    var geoData = {};
+    
+    var geoData = { data: {} };
 
-	var pollGeoData = function(){
+	var getGeoData = function(){
 
-		$http({
-			method: 'GET',
-			url : '../data/geochart.json'
-	    }).then(function(res){
-	    	geoData = res.data;
-	    	$timeout(pollGeoData, 1000);
+		$http.get('../data/geochart.json').then(function(res){
+	    	if (typeof res.data === 'object') {
+                geoData.data = res.data;
+                //console.log(data.resp);
+            } else {
+                error(res.data);
+            }
+            $timeout(getGeoData, 10000);
+
 	    });
 	};
+    
+	getGeoData();
 
-	pollGeoData();
 
 	return {
-		data : geoData
+		geoData : geoData
 	};
+	
 
 }]);
