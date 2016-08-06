@@ -6,8 +6,8 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('DataViewCtrl',['$scope','$interval', 'NgTableParams','dataMetricsService','Papa',
-     function ($scope,$interval, NgTableParams,dataMetricsService,Papa) {
+  .controller('DataViewCtrl',['$scope','$interval', 'NgTableParams','dataMetricsService',
+     function ($scope,$interval, NgTableParams,dataMetricsService) {
 
     'use strict';
 
