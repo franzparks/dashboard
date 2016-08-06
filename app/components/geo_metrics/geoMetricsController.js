@@ -6,7 +6,7 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('GeoCtrl',['$scope','$interval','geoMetricsService', function ($scope,$interval,geoMetricsService) {
+  .controller('GeoCtrl',['$scope','$interval','$location','geoMetricsService', function ($scope,$interval, $location,geoMetricsService) {
     
    'use strict';
 
@@ -19,9 +19,12 @@ angular.module('corporateDashBoardApp')
         }, function(error) {
         console.log('Error:', error);
     });*/
-
-    $scope.dataSource = geoMetricsService.geoData;
-    console.log("from service data : "+ Object.keys(geoMetricsService.geoData));
+    var promise;
+    //$scope.getData = function(){
+        $scope.dataSource = geoMetricsService.geoData;
+        console.log("from service data : "+ geoMetricsService.geoData);
+    //};
+    
 
     /*var refreshData = function(){
 
@@ -40,14 +43,42 @@ angular.module('corporateDashBoardApp')
     };
     
     var promise = $interval(refreshData, 1000); 
+    */
 
+    //kick start the polling
+    //if($location.path() === '/geo' && geoMetricsService.promise === undefined){
+        //console.log("am here!!!!!!!!");
+        //geoMetricsService.startPolling();
+    //}
+    //console.log('path is : '+$location.path());
+
+    //$scope.start = true;
+
+    //if($scope.start){
+        //geoMetricsService.startPolling();
+    //}
+    $scope.start = function(){
+        $scope.stop();
+
+        promise = $interval(geoMetricsService.getGeoData, 1000);
+    };
+
+    $scope.stop = function(){
+        $interval.cancel(promise);
+        promise = undefined;
+    };
+
+    $scope.start();
     // Cancel interval on page changes
     $scope.$on('$destroy', function(){
-        if (promise) {
-            $interval.cancel(promise);
-            promise = undefined;
-        }
-    });  */ 
+        //console.log('been called to destroy');
+        //if (geoMetricsService.promise) {
+        //    $interval.cancel(geoMetricsService.promise);
+        //    geoMetricsService.promise = undefined;
+        //    $scope.start = false;
+       // }
+       $scope.stop();
+    }); 
 
    
   }]);
