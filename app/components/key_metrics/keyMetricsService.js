@@ -22,7 +22,7 @@ angular.module('corporateDashBoardApp')
     		url : '../data/reportedissues.json'
     	}).then(function(response) {
            
-            reportedIssuesData.data = response.data;
+            reportedIssues.data = response.data;
             
         });
 
@@ -35,7 +35,7 @@ angular.module('corporateDashBoardApp')
 			url : '../data/openissues.json'
 	    }).then(function(response) {
 
-            openIssuesData.data = response.data;
+            openIssues.data = response.data;
             
         });
 	};
@@ -46,7 +46,7 @@ angular.module('corporateDashBoardApp')
 			url : '../data/payingcustomers.json'
 	    }).then(function(response) {
 
-            payingCustomersData.data = response.data;
+            payingCustomers.data = response.data;
             
         });
 	      
