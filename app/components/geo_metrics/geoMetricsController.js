@@ -25,6 +25,7 @@ angular.module('corporateDashBoardApp')
         promise = undefined;
     };
 
+    //start polling when controller scope is created
     $scope.start();
 
     // Cancel interval on page changes
