@@ -42,6 +42,7 @@ angular.module('corporateDashBoardApp')
             });
             
             dataView.data = latestData;
+            //console.log('dataView Metrics Data : '+dataView.data);
         }
        });
     };
