@@ -13,7 +13,7 @@ angular.module('corporateDashBoardApp')
     var promise;
     
     $scope.dataSource = geoMetricsService.geoData;
-     console.log("from service data : "+ geoMetricsService.geoData);  
+    //console.log("from service data : "+ geoMetricsService.geoData);  
 
     $scope.start = function(){
         $scope.stop();
