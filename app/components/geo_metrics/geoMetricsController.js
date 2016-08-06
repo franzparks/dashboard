@@ -6,7 +6,7 @@
  * Controller of the corporateDashBoardApp
  */
 angular.module('corporateDashBoardApp')
-  .controller('GeoCtrl',['$scope','$interval','$location','geoMetricsService', function ($scope,$interval, $location,geoMetricsService) {
+  .controller('GeoCtrl',['$scope','$interval','geoMetricsService', function ($scope,$interval,geoMetricsService) {
     
    'use strict';
 

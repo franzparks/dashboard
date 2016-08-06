@@ -6,7 +6,7 @@
  * Service in the corporateDashBoardApp.
  */
 angular.module('corporateDashBoardApp')
-  .service('geoMetricsService',['$http','$interval','$location', function ($http, $interval) {
+  .service('geoMetricsService',['$http', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     'use strict';
     
