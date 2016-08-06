@@ -33,7 +33,7 @@ angular.module('corporateDashBoardApp')
 		$http({
 			method: 'GET',
 			url : '../data/openissues.json'
-	    })then(function(response) {
+	    }).then(function(response) {
 
             openIssuesData.data = response.data;
             
