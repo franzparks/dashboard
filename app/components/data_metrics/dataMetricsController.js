@@ -11,6 +11,8 @@ angular.module('corporateDashBoardApp')
 
     'use strict';
 
+    var promise;
+
     //var self = this;
 	$scope.issues = [];
 
@@ -55,14 +57,22 @@ angular.module('corporateDashBoardApp')
     };
     
     
-    var promise = $interval(refreshData, 1000); 
+    $scope.start = function(){
+        $scope.stop();
+        promise = $interval(geoMetricsService.getGeoData, 1000);
+    };
+
+    $scope.stop = function(){
+        $interval.cancel(promise);
+        promise = undefined;
+    };
+
+    //start polling when controller scope is created
+    $scope.start();
 
     // Cancel interval on page changes
     $scope.$on('$destroy', function(){
-        if (angular.isDefined(promise)) {
-            $interval.cancel(promise);
-            promise = undefined;
-        }
+       $scope.stop();
     });      
 
   }]);
