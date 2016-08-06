@@ -15,7 +15,7 @@ angular.module('corporateDashBoardApp')
     $scope.reportedIssuesData = keyMetricsService.reportedIssues;
     $scope.openIssuesData = keyMetricsService.openIssues;
     $scope.payingCustomersData = keyMetricsService.payingCustomers;
-    console.log("from service data : "+ keyMetricsService.reportedIssues);      
+    //console.log('from service data : '+ keyMetricsService.reportedIssues);      
     
     $scope.start = function(){
         $scope.stop();
