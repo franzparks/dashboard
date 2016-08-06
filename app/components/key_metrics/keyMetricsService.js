@@ -39,7 +39,7 @@ angular.module('corporateDashBoardApp')
 	    }).then(function(response) {
 
             openIssues.data = response.data;
-            console.log('keyMetrics Data :'+response.data);
+            //console.log('keyMetrics Data :'+response.data);
             
         });
 	};

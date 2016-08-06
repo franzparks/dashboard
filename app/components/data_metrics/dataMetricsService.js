@@ -41,10 +41,11 @@ angular.module('corporateDashBoardApp')
                 }
             });
             
+            //update only when data changes
             if(dataView.data !== latestData){
             	dataView.data = latestData;
             }
-            console.log('dataView Metrics Data : '+dataView);
+            //console.log('dataView Metrics Data : '+dataView);
         }
        });
     };
