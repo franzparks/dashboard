@@ -16,7 +16,11 @@ angular.module('corporateDashBoardApp')
 
 		$http.get('../data/geochart.json').then(function(res){
 	    	if (typeof res.data === 'object') {
-                geoData.data = res.data;
+	    		
+	    		//update only when data changes
+                if(geoData.data !== res.data){
+                	geoData.data = res.data;
+                }
                 console.log('geo Metrics Data : '+res.data);
             } else {
                 error(res.data);

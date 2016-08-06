@@ -21,8 +21,11 @@ angular.module('corporateDashBoardApp')
     		method: 'GET',
     		url : '../data/reportedissues.json'
     	}).then(function(response) {
-           
-            reportedIssues.data = response.data;
+           //update only when data changes
+           if(reportedIssues.data !== response.data){
+           		reportedIssues.data = response.data;
+           }
+            
             
         });
 
