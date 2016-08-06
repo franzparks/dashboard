@@ -18,14 +18,7 @@ angular.module('corporateDashBoardApp')
     $scope.sortReverse  = false;  // set the default sort order
     $scope.searchTable   = '';     // set the default search/filter term
 
-    //dataMetricsService.getDataViewData().then(function(response) {
-        // this callback will be called asynchronously
-        // when the response is available
-    //    $scope.data = response.data;
-    //    $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
-        
-    //});
-
+  
     var refreshData = function(){
         Papa.Papa.parse('../data/MOCK_DATA.csv', {
             download: true,
