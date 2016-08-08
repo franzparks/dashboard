@@ -18,7 +18,7 @@ angular.module('corporateDashBoardApp')
     //console.log('from service data : '+ keyMetricsService.reportedIssues);      
     
     $scope.start = function(){
-        $scope.stop();
+        $scope.stop(); //stop any currently running interval
         promise = $interval(keyMetricsService.refreshData, 1000);
     };
 

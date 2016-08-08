@@ -23,7 +23,7 @@ angular.module('corporateDashBoardApp')
     
     
     $scope.start = function(){
-        $scope.stop();
+        $scope.stop(); //stop any currently running interval
         promise = $interval(dataMetricsService.getIssuesData, 1000);
     };
 
