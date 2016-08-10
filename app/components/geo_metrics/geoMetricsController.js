@@ -16,7 +16,7 @@ angular.module('corporateDashBoardApp')
     //console.log("from service data : "+ geoMetricsService.geoData);  
 
     $scope.start = function(){
-        $scope.stop();
+        $scope.stop(); //stop any currently running interval
         promise = $interval(geoMetricsService.getGeoData, 1000);
     };
 
